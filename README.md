@@ -1,1 +1,15 @@
 # informe--del-proyecto realizado por el grupo 7 
+**Orden:**
+Portada->"1_FrontPage.md"
+Registro de Versiones->"2_VersionRegistration.md.md"
+Reporte de Colaboración->"3_Report.md"
+Contenido->"4_Content.md"
+Student Outcome->"5_StudentOutcome.md"
+Capitulo I: Introduction ->"Chapter1"
+Capitulo II: Requirements Elicitation & Analysis ->"Chapter2"
+Capitulo III: Requirements Specification ->"Chapter3"
+Capitulo IV: Product Design ->"Chapter4"
+Capitulo V: Product Implementation, Validation & Deployment ->"Chapter5"
+Avance de Conclusiones->"Conclusions.md"
+Bibliografía ->"Bibliography.md"
+Anexos ->"Annexes.md"
