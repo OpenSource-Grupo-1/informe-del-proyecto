@@ -1,4 +1,4 @@
-# informe--del-proyecto realizado por el grupo 7 
+# informe--del-proyecto realizado por el grupo 1 
 **Orden:**
 Portada->"1_FrontPage.md"
 Registro de Versiones->"2_VersionRegistration.md.md"
