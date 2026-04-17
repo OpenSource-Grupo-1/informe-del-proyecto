@@ -8,7 +8,7 @@
 ### Profesor Hugo Allan Mori Paiva
 
 # "Informe de Trabajo Final"
-#### Grupo 7 - “HMK”- Kosok
+#### Grupo 1 - “HMK”- "Nombre del producto"
 
 ## Integrantes:
 
