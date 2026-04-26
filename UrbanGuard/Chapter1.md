@@ -141,7 +141,10 @@ Aproximadamente el 40% de empresas de transporte en Lima y Callao pagan cupos, s
 **Hypothesis Statement 3:** Creemos que al ofrecer a los usuarios visibilidad sobre el estado y recorrido de las unidades, se incrementará su confianza en el servicio de transporte. Sabremos que esto es cierto cuando al menos el 60 % de los usuarios reporten mayor confianza en encuestas posteriores al uso
 
 #### 1.2.2.4 Lean UX Canvas 
-![Lean UX Canvas](UrbanGuard/Resources/img/LeanUxCanvas.png)
+
+
+<img width="784" height="434" alt="LeanUxCanvas" src="https://github.com/user-attachments/assets/3c4b588c-914b-41f6-bc54-abfcf16d9ba9" />
+
 #### 1.3 Segmento Objetivo
 
 | Segmento objetivo | Caracteristicas demográficas | Información estadística de sustento |
