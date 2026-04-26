@@ -142,7 +142,7 @@ Aproximadamente el 40% de empresas de transporte en Lima y Callao pagan cupos, s
 
 #### 1.2.2.4 Lean UX Canvas 
 
-![][image6]		
+![Lean UX Canvas](UrbanGuard/Resources/img/LeanUxCanvas.png)
 
 #### 1.3 Segmento Objetivo
 
