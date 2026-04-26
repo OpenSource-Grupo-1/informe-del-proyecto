@@ -2,7 +2,6 @@
 
 ---
 
-
 ![upcLogo](UrbanGuard\Resources\img\UPClogo.png)
 
 
