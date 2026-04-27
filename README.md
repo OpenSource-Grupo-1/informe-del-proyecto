@@ -2,8 +2,7 @@
 
 ---
 
-![upcLogo](UrbanGuard\Resources\img\UPClogo.png)
-
+<img src="UrbanGuard\Resources\img\UPClogo.png" width="180" alt="Logo UPC">
 
 ### Universidad Peruana de Ciencias Aplicadas
 
