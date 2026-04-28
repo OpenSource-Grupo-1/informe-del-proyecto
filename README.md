@@ -182,7 +182,7 @@ Nuestra propuesta tecnológica es **SafeBus**, un sistema que articula tres pila
 | ![LeonardoFoto](UrbanGuard/Resources/img/leonardo.png)  | Leonardo Sebastian Delgado Arriola   | Ingenieria de Software | C++, HTML, CSS, JS, Vue, MySQL, MongoDB, Git                                                                        |
 |     ![BorisFoto](UrbanGuard/Resources/img/boris.png)      | Boris Alvarado Millan    | Ingenieria de Software | Java, Html, Css, JavaScript, Angular, Vue, Node.js, TypeScript, TailwindCss, Spring, C++, Python                    |
 | ![CarlosFoto](UrbanGuard/Resources/img/carlos.png) | Blancas Chávez, Carlos Franco      | Ingenieria de Software | C++, HTML, CSS, MySQL, Python (basics), C# (basics)                                                                 |
-| ![IvonneFoto](UrbanGuard/Resources/img/Ivonne.png) | Ivonne Beatriz Ibañez Torres                       | Ingenieria de Software | C++ y Python, y conocimientos en diseño y patrones de software, PostgreSQL y MongoDB, Java ,Spring Boot y  Node.js. |
+| ![IvonneFoto](UrbanGuard/Resources/img/ivonne.png) | Ivonne Beatriz Ibañez Torres                       | Ingenieria de Software | C++ y Python, y conocimientos en diseño y patrones de software, PostgreSQL y MongoDB, Java ,Spring Boot y  Node.js. |
 |  ![FernandoFoto](UrbanGuard/Resources/img/fernando.png)   | Fernando Carlos Espíritu Silvestre | Ingenieria de Software | C++, Java, JavaScript, HTML, CSS, SQL Server, MongoDB, Git                      
 ---
 
