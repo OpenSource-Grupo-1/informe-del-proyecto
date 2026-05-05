@@ -1144,6 +1144,7 @@ Resumen: Como principales tecnologías, usaremos Tailwind CSS, HTML y TypeScript
 | TypeScript  | \- Variables/funciones en camelCase. Clases/interfaces en PascalCase. Tipado obligatorio.  | \- Usar readonly para propiedades que no deben cambiar. Preferir funciones puras y evitar efectos secundarios.  |
 
 ### Front-End:
+Resumen: Se utilizarán HTML, TypeScript y CSS como tecnologías principales. Los componentes serán pequeños y tipados, con comunicación clara mediante props/emits y un manejo adecuado del estado y las APIs.
 
 | Tecnología  | Convenciones principales  | Convenciones para código  |
 | :---- | :---- | :---- |
