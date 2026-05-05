@@ -1214,7 +1214,7 @@ La Landing Page incluye las siguientes secciones:
 
 ##### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-> *[Pendiente de completar]*
+Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al Landing Page estático. No se desarrollaron ni desplegaron Web Services (RESTful API) en esta iteración, por lo que no aplicadocumentación de endpoints para este Sprint. La documentación de servicios web se incorporará a partir del Sprint 2, conforme a lo planificado en el Product Backlog.
 
 ##### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
