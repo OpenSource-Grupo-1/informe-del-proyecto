@@ -1167,8 +1167,15 @@ Estas herramientas están principalmente orientadas a mejorar el flujo de desarr
 
 #### 5.1.4. Software Deployment Configuration
 
-> *[Paso a paso del deploy en GitHub Pages - pendiente de adjuntar]*
+Esta sección detalla los pasos necesarios para desplegar de forma satisfactoria los productos digitales que componen la solución: 
 
+**1\. Landing Page \- HTML, CSS y TypeScript**
+
+Para que nuestra landing page esté disponible para todos nuestros usuarios, la publicamos como un sitio web utilizando la plataforma de GitHub. El proceso se llevó a cabo de la siguiente manera:
+<img width="841" height="438" alt="image" src="https://github.com/user-attachments/assets/f83df4df-5565-4fd7-8b13-7b722c743a9a" />
+
+
+1\. Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código de la Landing Page de SafeBus
 ---
 
 ### 5.2. Landing Page, Services & Applications Implementation
