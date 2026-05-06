@@ -1017,7 +1017,8 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 
 **Accesibilidad y objetivos táctiles:** Todos los elementos interactivos del prototipo tienen dimensiones mínimas de 48 × 48 px, especialmente relevantes para conductores que interactúan con la aplicación desde su smartphone durante la jornada de manejo. El botón de pánico tiene dimensiones ampliadas y color rojo con alto contraste para garantizar su activación inmediata bajo condiciones de estrés. Los contrastes de color en todos los estados cumplen el mínimo WCAG 2.1 AA.
 
----
+
+<img src= "UrbanGuard/Resources/img/SafeBusLading.png">
 
 ### Flujos de interacción cubiertos por el prototipo
 
