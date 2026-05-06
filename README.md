@@ -1024,13 +1024,21 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 
 **Flujo 1 — Verificación e inicio de servicio del conductor:** Comprende la pantalla de verificación de identidad mediante código QR, la validación de autorización del conductor para el vehículo asignado, la validación de que el conductor no esté operando otra unidad simultáneamente, la pantalla de servicio activo con el botón de pánico, el contador de pasajeros en tiempo real y el botón de finalización de turno con confirmación modal.
 
+<img src= "UrbanGuard/Resources/img/AccesoAutorizadoConductor.png">
+
 **Flujo 2 — Gestión de pasajeros y detección de anomalías:** Comprende la pantalla de conteo de pasajeros con botones de abordaje y bajada, la alerta visual al superar la capacidad máxima del vehículo, la detección y notificación de variaciones anómalas en el número de pasajeros y la consulta del estado actual del servicio.
+
+<img src= "UrbanGuard/Resources/img/ConteoDePasajeros.png">
 
 **Flujo 3 — Activación y gestión de alertas de emergencia:** Comprende la activación del botón de pánico por el conductor, la confirmación de envío con indicador de reintento automático si no hay respuesta, la recepción de la alerta en el panel de la central con clasificación automática por nivel de gravedad, el detalle de la alerta con conductor, vehículo, número de pasajeros y ubicación, el registro del tiempo de respuesta al confirmar la atención y el escalamiento automático de alertas no atendidas con notificación a múltiples destinatarios.
 
+<img src= "UrbanGuard/Resources/img/EnvioDeAlerta.png">
+
 **Flujo 4 — Monitoreo de flota por la empresa administradora:** Comprende el dashboard de estado en tiempo real de todas las unidades activas, el módulo de seguimiento de ubicación por vehículo, el monitoreo de ocupación con comparación entre rutas, la detección de unidades que superan su capacidad y el historial completo de emergencias filtrable por fecha, conductor y vehículo.
 
-**Flujo 5 — Administración y reportes:** Comprende el módulo de gestión de conductores con activación y desactivación sin eliminación de registros, la asignación de conductor a vehículo con validación de conflictos, las estadísticas generales de la flota, el cálculo de promedio de pasajeros por viaje y el reporte de tiempos de respuesta de la central ante emergencias.
+<img src= "UrbanGuard/Resources/img/MonitoreoEmpresaAdministradora.png">
+
+
 ---
 
 ### 4.6. Domain-Driven Software Architecture
