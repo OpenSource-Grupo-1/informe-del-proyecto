@@ -1277,9 +1277,9 @@ Durante el Sprint 1, todos los miembros del equipo participaron activamente en l
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en la rama `develop` y realizando la integración a `main` mediante Pull Requests revisados y aprobados por otros miembros. Se realizaron un total de 4 Pull Requests durante el Sprint.
 
- ![commits1](UrbanGuard/Resources/commits1.png)
+ ![commits1](UrbanGuard/Resources/commits1.png "commits1")
  
- ![commits2](UrbanGuard/Resources/commits2.png)
+ ![commits2](UrbanGuard/Resources/commits2.png "commits2")
  
 ---
 
