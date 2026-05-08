@@ -783,8 +783,11 @@ La Landing Page incluye las siguientes secciones:
   
   <img src="UrbanGuard/Resources/img/ComoFuncionaSafeBus.png">
   
-- **Estadísticas:** Presentación de indicadores relevantes relacionados con la problemática del transporte público.
 - **Navegación:** Barra superior que permite acceder a las diferentes secciones del sitio.
+  
+  <img src="UrbanGuard/Resources/img/SeccionesSafeBus.png">
+  
+- **Estadísticas:** Presentación de indicadores relevantes relacionados con la problemática del transporte público.
 - **Diseño e Interfaz:** Diseño moderno con estilo oscuro, tipografía llamativa y colores contrastantes (verde neón).
 
 
