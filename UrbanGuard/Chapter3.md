@@ -85,7 +85,7 @@
 
 El Impact Mapping es una herramienta visual que ayuda a organizar y priorizar qué funciones debe tener un producto, por lo que lo vamos a aplicar para ilustrar los objetivos que buscamos conseguir con nuestra propuesta.
 
-A continuación se presenta el Impact Map desarrollado para **UrbanGuard / SafeBus**:
+A continuación se presenta el Impact Map desarrollado para **SafeBus**:
 
 ![Impact Mapping Parte 1](Resources/img/ImpactMap1.png)
 
