@@ -772,13 +772,22 @@ Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoria
 La Landing Page incluye las siguientes secciones:
 
 - **Hero:** Presentación principal con el mensaje "Protege tu ruta, asegura tu futuro", con botones de llamada a la acción "Empezar ahora" y "Ver características".
+  
+  <img src="UrbanGuard/Resources/img/EmpezarAhora.png">
+  
 - **Características:** Describe las funcionalidades principales: verificación de conductores mediante código QR, botón de pánico para alertas en tiempo real, conteo de pasajeros a bordo y monitoreo continuo.
+  
+  <img src="UrbanGuard/Resources/img/CaracteristicasSafeBus.png">
+
 - **Cómo funciona:** Explicación general del flujo del sistema, desde la validación del conductor hasta la gestión de emergencias.
+  
+  <img src="UrbanGuard/Resources/img/ComoFuncionaSafeBus.png">
+  
 - **Estadísticas:** Presentación de indicadores relevantes relacionados con la problemática del transporte público.
 - **Navegación:** Barra superior que permite acceder a las diferentes secciones del sitio.
 - **Diseño e Interfaz:** Diseño moderno con estilo oscuro, tipografía llamativa y colores contrastantes (verde neón).
 
-> *[Capturas de pantalla de la Landing Page - pendiente de adjuntar]*
+
 
 ##### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
