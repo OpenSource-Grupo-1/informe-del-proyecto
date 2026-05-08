@@ -22,7 +22,7 @@ La paleta de colores de SafeBus se despliega en tonos oscuros y con contrastes, 
 
 - **Negro:** Usamos el color negro como la base de la interfaz. Este tono aporta elegancia, seriedad y profundidad, además de generar un entorno visual enfocado y libre de distracciones, refuerza la percepción de control, vigilancia y tecnología.
 <center>
-<img src="Resources/img/Negro.png">
+<img src="Resources/img/negro.png">
 </center>
 
 - **Verde** Usamos en verde neón (#C3F400) como color principal de aceto. Lo usamos en botones, indicadores y títulos. Este color se asocia a sistemas digitales, monitoreo y confirmación, transmitiendo dinamismo e innovación. El otro verde (#596D0B) lo usamos de color secundario para generar contraste.
@@ -53,7 +53,7 @@ El diseño se organizará mediante el uso de espacios consistentes y estructuras
 
 - Base unit: Se usará la regla de múltiplos de px para paddings y spacing.
 <center>
-<img src="Resources/img/Spacing.png">
+<img src="Resources/img/spacing.png">
 </center>
 
 - Grid: Márgenes de 24px para mantener armonía en la vista.
