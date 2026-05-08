@@ -841,6 +841,83 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
  
 ---
 
+#### 5.2.2. Sprint 2
+
+##### 5.2.2.1. Sprint Planning 2
+
+> *[Pendiente de completar]*
+
+##### 5.2.2.2. Aspect Leaders and Collaborators
+
+> *[Pendiente de completar]*
+
+## 5.2.2.3 Sprint Backlog 2
+
+El propósito de este Sprint es crear, desarrollar y probar las secciones del frontend de SafeBus, asegurando una navegación intuitiva y el correcto funcionamiento de los elementos clave del sistema. El objetivo es que los operadores, conductores y administradores puedan interactuar fácilmente con la plataforma, aumentando la seguridad operativa y contribuyendo al logro de los objetivos de UrbanGuard.
+
+Enlace: 
+
+| User Story ID | User Story Title | Task ID | Task Title | Task Description | Estimated Hours | Assigned To | Status |
+|--------------|-----------------|---------|-----------|-----------------|----------------|-------------|--------|
+| US-01 | Verificar identidad del conductor | T01-1 | Diseño de Vista Login | Crear UI de pantalla split con imagen de bus y formulario de verificación. | 4 | Carlos Blancas | Done |
+| | | T01-2 | Implementación UI Login | Programar lógica de verificación por código de empleado con mensajes de error. | 5 | Carlos Blancas | Done |
+| | | T01-3 | Diseño de Vista QR Scanner | Crear UI del escáner con viewport de cámara, esquinas animadas y línea de escaneo. | 4 | Boris Alvarado | Done |
+| | | T01-4 | Implementación UI QR Scanner | Programar animación de línea de escaneo y tarjeta de identidad verificada. | 5 | Boris Alvarado | Done |
+| US-02 | Registrar inicio de servicio | T02-1 | Diseño de Vista Access Authorized | Crear UI de pantalla verde con modal de confirmación y datos GPS. | 3 | Leonardo Delgado | Done |
+| | | T02-2 | Implementación UI Access Authorized | Programar lógica de inicio de turno y navegación al dashboard. | 3 | Leonardo Delgado | Done |
+| US-03 | Activar alerta de emergencia | T03-1 | Diseño de Vista Panic Alert | Crear UI de pantalla roja con modal ¡ALERTA ENVIADA! y datos de transmisión. | 4 | Ivonne Ibañez | Done |
+| | | T03-2 | Implementación UI Panic Alert | Programar countdown de cancelación y lógica de envío de alerta a central. | 4 | Ivonne Ibañez | Done |
+| US-04 | Recepción de alerta en central | T04-1 | Diseño Panel de Alertas Admin | Crear UI del listado de alertas con niveles CRÍTICO, ALTO, MEDIO, BAJO. | 4 | Fernando Espiritu | Done |
+| | | T04-2 | Implementación UI Alertas Admin | Programar lógica de resolución de alertas y actualización de estado. | 4 | Fernando Espiritu | Done |
+| US-06 | Conteo de pasajeros automáticamente | T06-1 | Diseño Métrica Pasajeros Dashboard | Maquetar tarjeta de conteo de pasajeros en tiempo real dentro del dashboard. | 3 | Boris Alvarado | Done |
+| | | T06-2 | Implementación Conteo Pasajeros | Programar actualización dinámica del contador cada 15 segundos con datos simulados. | 4 | Boris Alvarado | Done |
+| US-07 | Consultar número de pasajeros | T07-1 | Diseño Vista Conteo de Pasajeros | Crear UI de sección de conteo en el panel lateral del conductor. | 2 | Leonardo Delgado | Done |
+| | | T07-2 | Implementación UI Conteo | Mostrar datos actualizados de pasajeros abordo desde el estado global. | 3 | Leonardo Delgado | Done |
+| US-08 | Visualizar información del servicio | T08-1 | Diseño Sidebar y Toolbar Conductor | Crear UI del menú lateral con íconos, rutas activas y barra superior. | 4 | Ivonne Ibañez | Done |
+| | | T08-2 | Implementación Navegación Conductor | Programar routing activo, lazy loading y navegación entre vistas del conductor. | 4 | Carlos Blancas | Done |
+| US-14 | Validar autorización del conductor | T14-1 | Diseño Vista Access Authorized | Crear UI de confirmación con coordenadas GPS, estado central y audio remoto. | 3 | Fernando Espiritu | Done |
+| | | T14-2 | Implementación Validación Conductor | Programar verificación de estado activo del conductor antes de iniciar turno. | 3 | Carlos Blancas | Done |
+| US-15 | Asociación de conductor a vehículo | T15-1 | Diseño Asignación Conductor-Bus | Crear UI de cards de unidades con estado y datos del conductor asignado. | 3 | Boris Alvarado | Done |
+| | | T15-2 | Implementación ConductorStateService | Programar servicio global con signals para gestión de estado conductor-bus. | 4 | Carlos Blancas | Done |
+| US-16 | Consultar historial de emergencias | T16-1 | Diseño Vista Shift History | Crear UI de tabla con historial de turnos, filtros y columnas de métricas. | 3 | Ivonne Ibañez | Done |
+| | | T16-2 | Implementación UI Shift History | Programar tabla con datos mock de turnos finalizados y alertas registradas. | 3 | Ivonne Ibañez | Done |
+| US-25 | Registro de turno terminado | T25-1 | Diseño Vista Service Summary | Crear UI de resumen final con métricas de distancia, tiempo, pasajeros y recaudación. | 3 | Fernando Espiritu | Done |
+| | | T25-2 | Implementación UI Service Summary | Programar lógica de finalización de turno y visualización de datos acumulados. | 4 | Fernando Espiritu | Done |
+| US-27 | Visualizar estado de unidades | T27-1 | Diseño Vista Unit Assignment | Crear UI de cards de buses con placa, conductor, ruta, pasajeros y velocidad. | 3 | Boris Alvarado | Done |
+| | | T27-2 | Implementación UI Unit Assignment | Programar listado dinámico de unidades con indicadores de estado visual. | 3 | Boris Alvarado | Done |
+| US-28 | Monitorear ocupación en tiempo real | T28-1 | Diseño Control Center Admin | Crear UI del centro de control con mapa, KPIs y lista de unidades activas. | 5 | Fernando Espiritu | Done |
+| | | T28-2 | Implementación Control Center | Programar mapa OpenStreetMap, KPIs dinámicos y lista de unidades con estado. | 5 | Fernando Espiritu | Done |
+| US-30 | Visualización de misión y visión | T30-1 | Diseño Vista Impact Numbers | Crear UI de tarjetas KPI con íconos, valores y gráfico de barras semanal. | 3 | Leonardo Delgado | Done |
+| | | T30-2 | Implementación UI Impact Numbers | Programar visualización de métricas de impacto con datos estadísticos del sistema. | 3 | Leonardo Delgado | Done |
+| US-43 | Seguimiento de ubicación del vehículo | T43-1 | Diseño Vista Ver Mapa | Crear UI de mapa expandido con panel lateral de tiempo y distancia. | 4 | Carlos Blancas | Done |
+| | | T43-2 | Implementación Vista Ver Mapa | Programar integración OpenStreetMap con telemetría en tiempo real del turno activo. | 4 | Carlos Blancas | Done |
+| US-46 | Visualización de equipo de trabajo | T46-1 | Diseño Driver Management | Crear UI de tabla de conductores con foto, datos y acciones de gestión. | 3 | Leonardo Delgado | Done |
+| | | T46-2 | Implementación Driver Management | Programar tabla con búsqueda en tiempo real y datos mock de conductores. | 3 | Leonardo Delgado | Done |
+
+
+
+
+##### 5.2.2.4. Development Evidence for Sprint Review
+
+> *[Pendiente de completar]*
+
+##### 5.2.2.5. Execution Evidence for Sprint Review
+
+> *[Pendiente de completar]*
+
+##### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+> *[Pendiente de completar]*
+
+##### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+> *[Pendiente de completar]*
+
+##### 5.2.2.8. Team Collaboration Insights during Sprint
+
+> *[Pendiente de completar]*
+--
+
 ### 5.3. Validation Interviews
 
 #### 5.3.1. Diseño de Entrevistas
