@@ -214,19 +214,19 @@ La Landing Page incluye las siguientes secciones:
 
 - **Hero:** Presentación principal con el mensaje "Protege tu ruta, asegura tu futuro", con botones de llamada a la acción "Empezar ahora" y "Ver características".
   
-  <img src="UrbanGuard/Resources/img/EmpezarAhora.png">
+  <img src="Resources/img/EmpezarAhora.png">
   
 - **Características:** Describe las funcionalidades principales: verificación de conductores mediante código QR, botón de pánico para alertas en tiempo real, conteo de pasajeros a bordo y monitoreo continuo.
   
-  <img src="UrbanGuard/Resources/img/CaracteristicasSafeBus.png">
+  <img src="Resources/img/CaracteristicasSafeBus.png">
 
 - **Cómo funciona:** Explicación general del flujo del sistema, desde la validación del conductor hasta la gestión de emergencias.
   
-  <img src="UrbanGuard/Resources/img/ComoFuncionaSafeBus.png">
+  <img src="Resources/img/ComoFuncionaSafeBus.png">
   
 - **Navegación:** Barra superior que permite acceder a las diferentes secciones del sitio.
   
-  <img src="UrbanGuard/Resources/img/SeccionesSafeBus.png">
+  <img src="Resources/img/SeccionesSafeBus.png">
   
 - **Estadísticas:** Presentación de indicadores relevantes relacionados con la problemática del transporte público.
 - **Diseño e Interfaz:** Diseño moderno con estilo oscuro, tipografía llamativa y colores contrastantes (verde neón).
@@ -276,9 +276,9 @@ Durante el Sprint 1, todos los miembros del equipo participaron activamente en l
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en la rama `develop` y realizando la integración a `main` mediante Pull Requests revisados y aprobados por otros miembros. Se realizaron un total de 4 Pull Requests durante el Sprint.
 
- ![Commits1](UrbanGuard/Resources/img/commits1.png "commits1")
+ ![Commits1](Resources/img/commits1.png "commits1")
  
- ![Commits2](UrbanGuard/Resources/img/commits2.png "commits2")
+ ![Commits2](Resources/img/commits2.png "commits2")
  
 ---
 
