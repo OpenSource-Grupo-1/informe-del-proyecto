@@ -313,7 +313,7 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 
 El propósito de este Sprint es crear, desarrollar y probar las secciones del frontend de SafeBus, asegurando una navegación intuitiva y el correcto funcionamiento de los elementos clave del sistema. El objetivo es que los operadores, conductores y administradores puedan interactuar fácilmente con la plataforma, aumentando la seguridad operativa y contribuyendo al logro de los objetivos de UrbanGuard.
 
-Enlace: 
+Enlace: safebus-frontend.vercel.app
 
 | User Story ID | User Story Title | Task ID | Task Title | Task Description | Estimated Hours | Assigned To | Status |
 |--------------|-----------------|---------|-----------|-----------------|----------------|-------------|--------|
