@@ -364,7 +364,7 @@ Enlace: > **https://safebus-frontend.vercel.app**
 
 Durante el Sprint 2, se implementaron y probaron todas las funcionalidades planificadas de SafeBus. A continuacion se muestran las evidencias de las interfaces:
 
-1. Capturas de interfaces
+***Capturas de interfaces***
 
    **Login Verification**
    - **Descripción:** Pantalla de validación de identidad del conductor. Permite escanear un código QR o ingresar manualmente el código de verificación. Al validar, se muestra la información del conductor y del vehículo asignado, permitiendo iniciar el turno de manera segura.
@@ -425,11 +425,8 @@ Durante el Sprint 2, se implementaron y probaron todas las funcionalidades plani
  - **Evidencia visual:**
 <img width="1895" height="955" alt="image" src="https://github.com/user-attachments/assets/4d1a97bf-e1b5-4bf5-9329-8c5b757e2df4" />
 
-En conclusión, el Sprint 2 demuestra la **operatividad completa del sistema SafeBus**, con todas las interfaces críticas —como Login Verification, Access Authorized, Panic Alert, Control Center, Driver Management, Unit Assignment y Passenger Count— funcionando de manera integrada y lista para las pruebas de usuario final. Las actualizaciones de datos en tiempo real y la integración entre módulos confirman que el sistema está preparado para su operación y monitoreo efectivo.
+En conclusión, el Sprint 2 demuestra la operatividad completa del sistema SafeBus, con todas las interfaces críticas —como Login Verification, Access Authorized, Panic Alert, Control Center, Driver Management, Unit Assignment y Passenger Count— funcionando de manera integrada y lista para las pruebas de usuario final. Las actualizaciones de datos en tiempo real y la integración entre módulos confirman que el sistema está preparado para su operación y monitoreo efectivo.
 
-   
-  
-> *[Pendiente de completar]*
 
 ##### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
