@@ -362,6 +362,52 @@ Enlace: > **https://safebus-frontend.vercel.app**
 
 ##### 5.2.2.5. Execution Evidence for Sprint Review
 
+Durante el Sprint 2, se implementaron y probaron todas las funcionalidades planificadas de SafeBus. La evidencia de ejecución se puede organizar en tres categorías principales:
+
+1. Capturas de interfaces
+
+   **Login Verification**
+   - **Descripción:** Pantalla de validación de identidad del conductor. Permite escanear un código QR o ingresar manualmente el código de verificación. Al validar, se muestra la información del conductor y del vehículo asignado, permitiendo iniciar el turno de manera segura.
+   - **Tareas asociadas:** T01-1 (Diseño de Vista Login), T01-2 (Implementación UI Login)
+   - **Evidencia visual:**
+<img width="1857" height="952" alt="image" src="https://github.com/user-attachments/assets/04aa0510-a622-4e9f-b6cf-a78d22786d81" />
+   **Access Authorized**
+   - **Descripción:** Pantalla que confirma que el conductor ha sido autorizado para iniciar el turno. Muestra coordenadas GPS, estado central y audio remoto activado.
+   - **Tareas asociadas:** T02-1, T02-2
+   - **Evidencia visual:**
+<img width="1857" height="921" alt="image" src="https://github.com/user-attachments/assets/7250def1-235f-4772-8649-b8a6dbecf8a7" />
+   **Panic Alert**
+   - **Descripción:** Pantalla roja con modal “¡ALERTA ENVIADA!” y countdown de cancelación.
+   - **Tareas asociadas:** T03-1, T03-2
+   - **Evidencia visual:** ![Panic Alert](ruta_a_imagen_panic.png)
+<img width="1837" height="935" alt="image" src="https://github.com/user-attachments/assets/337e4faf-2abc-4ee8-b069-4e3751d8981d" />
+  **Control Center / Dashboard Admin**
+  - **Descripción:** Panel de control con mapa de unidades activas, KPIs y lista de alertas en tiempo real.
+  - **Tareas asociadas:** T28-1, T28-2
+  - **Evidencia visual:**
+<img width="1888" height="943" alt="image" src="https://github.com/user-attachments/assets/4ff52275-8d79-4940-a145-567040258bca" />
+ **Driver Management**
+ - **Descripción:** Tabla de conductores con foto, datos y acciones de gestión.
+ - **Tareas asociadas:** T46-1, T46-2
+ - **Evidencia visual:**
+<img width="1885" height="937" alt="image" src="https://github.com/user-attachments/assets/3415861e-e775-4e23-adad-6c8781232dfe" />
+ **Unit Assignment**
+ - **Descripción:** Listado de buses con estado, conductor, pasajeros y velocidad.
+ - **Tareas asociadas:** T27-1, T27-2
+ - **Evidencia visual:**
+<img width="1882" height="933" alt="image" src="https://github.com/user-attachments/assets/1b1ea8c0-14ce-4e9d-ba39-3c09e2041271" />
+ **Passenger Count / Dashboard Metric**
+ - **Descripción:** Actualización dinámica del contador de pasajeros en tiempo real dentro del dashboard. Permite a los administradores ver cuántos pasajeros hay abordo en cada unidad.
+ - **Tareas asociadas:** T06-1, T06-2, T07-2
+ - **Evidencia visual:**
+<img width="1895" height="955" alt="image" src="https://github.com/user-attachments/assets/4d1a97bf-e1b5-4bf5-9329-8c5b757e2df4" />
+
+
+
+1. Capturas de interfaces
+   
+   
+
 > *[Pendiente de completar]*
 
 ##### 5.2.2.6. Services Documentation Evidence for Sprint Review
