@@ -89,7 +89,7 @@ El proceso de desarrollo del informe se realizó de forma incremental, incorpora
     - [2.3.2. User Task Matrix.](UrbanGuard/Chapter2.md#232-user-task-matrix)
     - [2.3.3. User Journey Mapping.](UrbanGuard/Chapter2.md#233-user-journey-mapping)
     - [2.3.4. Empathy Mapping.](UrbanGuard/Chapter2.md#234-empathy-mapping)
-- [2.4. Big Picture EventStorming.](UrbanGuard/Chapter2.md#24-big-picture-eventstorming)
+- [2.4. Big Picture EventStorming.](UrbanGuard/Chapter2.md#24-big-picture-event-storming)
 - [2.5. Ubiquitous Language.](UrbanGuard/Chapter2.md#25-ubiquitous-language)
 
 ## Capítulo III: Requirements Specification
