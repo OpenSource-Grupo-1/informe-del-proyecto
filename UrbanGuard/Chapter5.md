@@ -267,6 +267,7 @@ Durante el Sprint 1 se realizó el despliegue de la Landing Page de SafeBus util
 3. Se generó la URL pública del sitio:
 
    > **https://safe-bus-lading.vercel.app**
+   
 
 4. Vercel realiza redeploy automático cada vez que se hace un push a la rama `main`, garantizando que la versión publicada siempre refleje el estado más reciente del repositorio.
 
@@ -313,7 +314,7 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 
 El propósito de este Sprint es crear, desarrollar y probar las secciones del frontend de SafeBus, asegurando una navegación intuitiva y el correcto funcionamiento de los elementos clave del sistema. El objetivo es que los operadores, conductores y administradores puedan interactuar fácilmente con la plataforma, aumentando la seguridad operativa y contribuyendo al logro de los objetivos de UrbanGuard.
 
-Enlace: safebus-frontend.vercel.app
+Enlace: > **https://safebus-frontend.vercel.app**
 
 | User Story ID | User Story Title | Task ID | Task Title | Task Description | Estimated Hours | Assigned To | Status |
 |--------------|-----------------|---------|-----------|-----------------|----------------|-------------|--------|
