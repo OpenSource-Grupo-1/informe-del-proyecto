@@ -364,7 +364,7 @@ Enlace: > **https://safebus-frontend.vercel.app**
 
 Durante el Sprint 2, se implementaron y probaron todas las funcionalidades planificadas de SafeBus. A continuacion se muestran las evidencias de las interfaces:
 
-***Capturas de interfaces***
+1. ***Capturas de interfaces***:
 
    **Login Verification**
    - **Descripción:** Pantalla de validación de identidad del conductor. Permite escanear un código QR o ingresar manualmente el código de verificación. Al validar, se muestra la información del conductor y del vehículo asignado, permitiendo iniciar el turno de manera segura.
