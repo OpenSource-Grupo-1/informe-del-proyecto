@@ -374,6 +374,7 @@ Durante el Sprint 2, se implementaron y probaron todas las funcionalidades plani
 
 
 
+
    **Access Authorized**
    - **Descripción:** Pantalla que confirma que el conductor ha sido autorizado para iniciar el turno. Muestra coordenadas GPS, estado central y audio remoto activado.
    - **Tareas asociadas:** T02-1, T02-2
@@ -382,11 +383,13 @@ Durante el Sprint 2, se implementaron y probaron todas las funcionalidades plani
 
 
 
+
    **Panic Alert**
    - **Descripción:** Pantalla roja con modal “¡ALERTA ENVIADA!” y countdown de cancelación.
    - **Tareas asociadas:** T03-1, T03-2
-   - **Evidencia visual:** ![Panic Alert](ruta_a_imagen_panic.png)
+   - **Evidencia visual:**
 <img width="1837" height="935" alt="image" src="https://github.com/user-attachments/assets/337e4faf-2abc-4ee8-b069-4e3751d8981d" />
+
 
 
 
@@ -398,11 +401,13 @@ Durante el Sprint 2, se implementaron y probaron todas las funcionalidades plani
 
 
 
+
  **Driver Management**
  - **Descripción:** Tabla de conductores con foto, datos y acciones de gestión.
  - **Tareas asociadas:** T46-1, T46-2
  - **Evidencia visual:**
 <img width="1885" height="937" alt="image" src="https://github.com/user-attachments/assets/3415861e-e775-4e23-adad-6c8781232dfe" />
+
 
 
 
