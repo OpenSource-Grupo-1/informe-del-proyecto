@@ -202,9 +202,12 @@ El objetivo principal de este Sprint fue implementar y desplegar la primera vers
 
 ##### 5.2.1.4. Development Evidence for Sprint Review
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-|-----------|--------|-----------|----------------|---------------------|--------------|
-| | | | | | |
+Durante el Sprint 1, el equipo se enfocó exclusivamente en el desarrollo de la Landing Page del sistema **SafeBus**.  
+El objetivo principal de este Sprint fue implementar y desplegar la primera versión de la Landing Page del sistema SafeBus, buscando presentar de manera clara y atractiva la propuesta de valor de la plataforma orientada a la seguridad en el transporte público.
+
+A lo largo del Sprint se diseñaron e implementaron secciones clave como Hero, Nosotros, Beneficios, Funcionalidades, Testimonios, Preguntas Frecuentes, Tutoriales, Contacto y Footer. Cada sección fue desarrollada con el propósito de comunicar las principales características del sistema, como el uso de botones de pánico, monitoreo de pasajeros mediante sensores y gestión de alertas en tiempo real.
+
+También se trabajó en asegurar la adaptabilidad móvil, el cumplimiento de criterios de accesibilidad y la optimización inicial para motores de búsqueda (SEO), garantizando una experiencia fluida y accesible tanto en dispositivos móviles como en escritorio.
 
 ##### 5.2.1.5. Execution Evidence for Sprint Review
 
