@@ -566,8 +566,8 @@ El trabajo se organizó de manera estratégica, asignando a cada integrante mód
 - **Boris lideró el desarrollo del sistema de autenticación y seguridad, implementando el control de acceso y la protección de datos de los usuarios.**
 - **Fernando se especializó en el dashboard principal y monitoreo en tiempo real, enfocándose en la visualización de alertas, métricas y estados de riesgo de las unidades de transporte.**
 - **Leonardo desarrolló el núcleo del sistema de monitoreo de buses, implementando los modelos y repositorios relacionados con sensores, conteo de pasajeros y gestión de unidades.**
--**Carlos implementó la gestión de perfiles de usuarios y conductores, asegurando una experiencia personalizada y consistente dentro de la plataforma.**
--**Ivonne desarrolló el sistema de configuraciones y preferencias, permitiendo la personalización y adaptación de la aplicación según las necesidades de los usuarios.**
+- **Carlos implementó la gestión de perfiles de usuarios y conductores, asegurando una experiencia personalizada y consistente dentro de la plataforma.**
+- **Ivonne desarrolló el sistema de configuraciones y preferencias, permitiendo la personalización y adaptación de la aplicación según las necesidades de los usuarios.**
 
 Permite trabajar en diferentes ramas sin afectar la rama principal del proyecto.
 
