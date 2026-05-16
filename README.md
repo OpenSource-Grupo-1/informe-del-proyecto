@@ -32,7 +32,8 @@
 
 | Versión | Fecha | Autor/es | Descripción de Modificación |
 |---------|-------|----------|-----------------------------|
-| 0.1 | 05/04/2026 | — | Agregación de: Carátula, Registro de Versiones del Informe, Project Report Collaboration Insights, Contenido (Índice), Student Outcome, Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Capítulo III: Requirements Specification, Capítulo IV: Product Design, Capítulo V: Product Implementation, Validation & Deployment. Avance de: Conclusiones, Bibliografía, Anexos. |
+| 0.1 | 05/04/2026 | Todos los integrantes | Agregación de: Carátula, Registro de Versiones del Informe, Project Report Collaboration Insights, Contenido (Índice), Student Outcome, Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Capítulo III: Requirements Specification, Capítulo IV: Product Design, Capítulo V: Product Implementation, Validation & Deployment. Avance de: Conclusiones, Bibliografía, Anexos. |
+| 0.2 | 05/05/2026 | Todos los integrantes | Sprint II |
 
 ---
 </div>
@@ -45,13 +46,20 @@ El presente apartado tiene como finalidad evidenciar el trabajo colaborativo rea
 
 A partir de este repositorio, se analiza la participación de los integrantes mediante indicadores como la distribución de tareas, la frecuencia de contribuciones, la revisión de contenidos y la integración progresiva de los entregables desarrollados durante el avance del proyecto.
 
-En el contexto de la entrega correspondiente a AV1, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe.
+En el contexto de la entrega correspondiente a AV1, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
 
 ### AV1
 
 Durante el desarrollo de la entrega AV1, el equipo organizó la elaboración del informe mediante la asignación de responsabilidades por secciones. Esta distribución permitió avanzar de manera paralela en actividades relacionadas con investigación, análisis del segmento objetivo, definición de requisitos, diseño UX, modelado del dominio, arquitectura de software y documentación técnica.
 
-El proceso de desarrollo del informe se realizó de forma incremental, incorporando progresivamente los contenidos conforme se consolidaban los artefactos del proyecto. Todos los integrantes participaron activamente en la construcción del informe, realizando aportes continuos que permitieron consolidar una documentación coherente y alineada entre sus distintas secciones.
+El proceso de desarrollo del informe se realizó de forma incremental, incorporando progresivamente los contenidos conforme se consolidaban los artefactos del proyecto. Esto se refleja en el Registro de Versiones del Informe, donde se evidencia la evolución del documento desde su estructura inicial hasta la inclusión de elementos como Lean UX, entrevistas, user stories, impact maps, event storming, bounded contexts, diagramas C4, diagramas de clases, diseño de base de datos y evidencias de implementación.
+
+Asimismo, todos los integrantes participaron activamente en la construcción del informe, realizando aportes continuos que permitieron consolidar una documentación coherente y alineada entre sus distintas secciones. La colaboración se evidencia tanto en la planificación de tareas como en los cambios registrados en el repositorio, los cuales reflejan la participación distribuida del equipo.
+
+### TB1
+
+Durante la elaboración de la tb1, el equipo estructuró la elaboración del informe mediante una distribución de tareas por secciones. Esta organización permitió trabajar simultáneamente en actividades de la spint 2, todos los integrantes contribuyeron activamente al proceso, realizando aportes constantes que favorecieron la coherencia y alineación entre las diferentes secciones del documento.
+
 
 ---
 
@@ -156,7 +164,9 @@ El proceso de desarrollo del informe se realizó de forma incremental, incorpora
   - [5.3.2. Registro de Entrevistas](UrbanGuard/Chapter5.md#531-diseño-de-entrevistas)
   - [5.3.3. Evaluaciones según heurísticas](UrbanGuard/Chapter5.md#533-evaluaciones-según-heurísticas)
 - [5.4. Video About-the-Product](UrbanGuard/Chapter5.md#54-video-about-the-product)
-
+- [Conclusiones y recomendaciones](UrbanGuard/6_Conclusions.md)
+- [Bibliografía](UrbanGuard/7_Bibliography.md)
+- [Anexos](UrbanGuard/8_Annexes.md)
 
 ---
 
@@ -167,7 +177,7 @@ En Ingeniería de Software el logro contribuye a alcanzar el Student Outcome EAC
 
 | Criterio Específico | Acciones Realizadas | Conclusiones |
 |---------------------|---------------------|--------------|
-| 3.c1. Comunica oralmente con efectividad a diferentes rangos de audiencia | Integrante 1 - AV1: / Integrante 2 - AV1: / Integrante 3 - AV1: / Integrante 4 - AV1: / Integrante 5 - AV1: | ----------AV1---------- |
-| 3.c2. Comunica por escrito con efectividad a diferentes rangos de audiencia | Integrante 1 - AV1: / Integrante 2 - AV1: / Integrante 3 - AV1: / Integrante 4 - AV1: / Integrante 5 - AV1: | ----------AV1---------- |
+| 3.c1. Comunica oralmente con efectividad a diferentes rangos de audiencia | Delgado, Leonardo - tb1:Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. / Alvarado, Boris - tb1:Development Evidence for Sprint Review. Team Collaboration Insights during Sprint. / Ibañez, Ivonne - tb1:Sprint Planning 2. Aspect Leaders and Collaborators. / Blancas, Carlos - tb1: Sprint Backlog 2./ Espiritu, Fernando - tb1: Execution Evidence for Sprint Review. | Durante las entregas AV1 y TB1, el equipo fortaleció sus habilidades de comunicación técnica en contextos de alta exigencia. En la AV1, el enfoque estuvo orientado a la interacción y validación con usuarios finales; posteriormente, en la TB1, se reforzó la capacidad para justificar decisiones arquitectónicas complejas y responder de manera estructurada a observaciones técnicas críticas frente a una audiencia especializada.|
+| 3.c2. Comunica por escrito con efectividad a diferentes rangos de audiencia | Delgado, Leonardo - tb1:Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. / Alvarado, Boris - tb1:Development Evidence for Sprint Review. Team Collaboration Insights during Sprint. / Ibañez, Ivonne - tb1:Sprint Planning 2. Aspect Leaders and Collaborators. / Blancas, Carlos - tb1: Sprint Backlog 2./ Espiritu, Fernando - tb1: Execution Evidence for Sprint Review.| La comunicación escrita alcanzó un mayor nivel de profundidad técnica durante la TB1. La elaboración de los Bounded Contexts y la integración de diagramas estructurales demostraron la capacidad del equipo para organizar y presentar información compleja de manera clara y coherente, adaptando el lenguaje técnico tanto para desarrolladores como para evaluadores académicos especializados. |
 
 
