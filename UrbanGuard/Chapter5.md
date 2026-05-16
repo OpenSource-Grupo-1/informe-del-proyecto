@@ -358,7 +358,25 @@ Enlace: > **https://safebus-frontend.vercel.app**
 
 ##### 5.2.2.4. Development Evidence for Sprint Review
 
-> *[Pendiente de completar]*
+En esta sección se presenta la evidencia detallada del desarrollo alcanzado durante el Sprint 2, enfocado en la implementación de la Frontend Web Application de SafeBus utilizando Angular y TypeScript. Durante este segundo sprint, el equipo de SafeBus se concentró en desarrollar las interfaces principales que permitirán a transportistas y administradores monitorear y gestionar situaciones de riesgo dentro del transporte público.
+
+El desarrollo se llevó a cabo utilizando Angular como framework principal, junto con TypeScript para garantizar mayor robustez y escalabilidad del sistema, además de HTML y CSS para el diseño de las interfaces. Se implementó una arquitectura basada en componentes reutilizables siguiendo las buenas prácticas de Angular, separando adecuadamente componentes visuales, servicios, guards de navegación e interceptors para la comunicación HTTP.
+
+Las principales funcionalidades implementadas durante este sprint abarcan las interfaces necesarias para que los conductores y administradores puedan interactuar eficientemente con SafeBus. Se desarrollaron módulos enfocados en la gestión de alertas de emergencia, monitoreo de pasajeros y visualización de estados de riesgo dentro de las unidades de transporte público. Asimismo, se implementó lazy loading para optimizar el rendimiento de la aplicación y brindar una experiencia de usuario más fluida y responsive.
+
+El trabajo de desarrollo se organizó siguiendo buenas prácticas de frontend moderno, implementando componentes standalone según las recomendaciones actuales de Angular, gestión reactiva con RxJS, validaciones robustas en formularios y un diseño responsive adaptable a desktop, tablet y dispositivos móviles.
+
+Además, se realizó la integración completa con la Landing Page existente, permitiendo que los usuarios puedan acceder directamente a la aplicación web desde la página principal. La configuración también incluye internacionalización (i18n), cambio dinámico de tema y optimización de rendimiento mediante lazy loading.
+
+Principales funcionalidades implementadas:
+
+--Sistema de autenticación completo (login, registro y gestión de sesiones)
+--Gestión de perfiles de conductores y administradores
+--Sistema de alertas y botones de pánico en tiempo real
+--Monitoreo de cantidad de pasajeros mediante sensores de conteo
+--Visualización del estado y nivel de riesgo de las unidades de transporte
+--Panel de control para supervisión de incidentes y alertas
+--Integración completa con la Landing Page
 
 ##### 5.2.2.5. Execution Evidence for Sprint Review
 
