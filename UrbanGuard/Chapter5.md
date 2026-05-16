@@ -112,7 +112,7 @@ Resumen: Se utilizarán HTML, TypeScript y CSS como tecnologías principales. Lo
 
 ### Herramientas y configuración :
 
-Estas herramientas están principalmente orientadas a mejorar el flujo de desarrollo y facilitar la gestión de configuraciones y dependencias, pero todas ellas están relacionadas con frontend y el proceso de construcción del proyecto. Vite y Babel se encargan de la construcción del código, Git ayuda con el control de versiones y flujo de trabajo, y Docker puede ser útil para contenedores en entornos de desarrollo o despliegue. 
+Estas herramientas están principalmente orientadas a mejorar el flujo de desarrollo y facilitar la gestión de configuraciones y dependencias, pero todas ellas están relacionadas con frontend y el proceso de construcción del proyecto. Vite y Babel se encargan de la construcción del código, Git ayuda con el control de versiones y flujo de trabajo, y Docker puede ser útil para contenedores en entornos de desarrollo o despliegue.
 
 | Tecnología  | Convenciones principales  | Convenciones para código  |
 | :---- | :---- | :---- |
@@ -124,7 +124,7 @@ Estas herramientas están principalmente orientadas a mejorar el flujo de desarr
 
 #### 5.1.4. Software Deployment Configuration
 
-Esta sección detalla los pasos necesarios para desplegar de forma satisfactoria los productos digitales que componen la solución: 
+Esta sección detalla los pasos necesarios para desplegar de forma satisfactoria los productos digitales que componen la solución:
 
 **1\. Landing Page \- HTML, CSS y TypeScript**
 
@@ -213,21 +213,21 @@ Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoria
 La Landing Page incluye las siguientes secciones:
 
 - **Hero:** Presentación principal con el mensaje "Protege tu ruta, asegura tu futuro", con botones de llamada a la acción "Empezar ahora" y "Ver características".
-  
+
   <img src="Resources/img/EmpezarAhora.png">
-  
+
 - **Características:** Describe las funcionalidades principales: verificación de conductores mediante código QR, botón de pánico para alertas en tiempo real, conteo de pasajeros a bordo y monitoreo continuo.
-  
+
   <img src="Resources/img/CaracteristicasSafeBus.png">
 
 - **Cómo funciona:** Explicación general del flujo del sistema, desde la validación del conductor hasta la gestión de emergencias.
-  
+
   <img src="Resources/img/ComoFuncionaSafeBus.png">
-  
+
 - **Navegación:** Barra superior que permite acceder a las diferentes secciones del sitio.
-  
+
   <img src="Resources/img/SeccionesSafeBus.png">
-  
+
 - **Estadísticas:** Presentación de indicadores relevantes relacionados con la problemática del transporte público.
 - **Diseño e Interfaz:** Diseño moderno con estilo oscuro, tipografía llamativa y colores contrastantes (verde neón).
 
@@ -267,20 +267,20 @@ Durante el Sprint 1 se realizó el despliegue de la Landing Page de SafeBus util
 3. Se generó la URL pública del sitio:
 
    > **https://safe-bus-lading.vercel.app**
-   
+
 
 4. Vercel realiza redeploy automático cada vez que se hace un push a la rama `main`, garantizando que la versión publicada siempre refleje el estado más reciente del repositorio.
 
 ##### 5.2.1.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 1, todos los miembros del equipo participaron activamente en la implementación del Landing Page, evidenciando a traves de los commits registrados en el repositorio `informe-del-proyecto`. El trabajo se distribuyó de manera colaborativa: Fernando Espiritu lideró la configuración del repositorio y el pipeline de despliegue; Carlos Blancas y Leonardo Delgado se encargaron del desarrollo de funcionalidades interactivas y animaciones; Boris Alvarado e Ivonne Ibañez contribuyeron con correcciones de contenido y en la estructura base de la página. 
+Durante el Sprint 1, todos los miembros del equipo participaron activamente en la implementación del Landing Page, evidenciando a traves de los commits registrados en el repositorio `informe-del-proyecto`. El trabajo se distribuyó de manera colaborativa: Fernando Espiritu lideró la configuración del repositorio y el pipeline de despliegue; Carlos Blancas y Leonardo Delgado se encargaron del desarrollo de funcionalidades interactivas y animaciones; Boris Alvarado e Ivonne Ibañez contribuyeron con correcciones de contenido y en la estructura base de la página.
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en la rama `develop` y realizando la integración a `main` mediante Pull Requests revisados y aprobados por otros miembros. Se realizaron un total de 4 Pull Requests durante el Sprint.
 
  ![Commits1](Resources/img/commits1.png "commits1")
- 
+
  ![Commits2](Resources/img/commits2.png "commits2")
- 
+
 ---
 
 #### 5.2.2. Sprint 2
@@ -430,11 +430,111 @@ En conclusión, durante el Sprint 2 se implementaron y probaron exitosamente las
 
 ##### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-> *[Pendiente de completar]*
+Durante el Sprint 2 no se desplegaron Web Services propios con Spring Boot, dado que el alcance del sprint estuvo centrado en la implementación del frontend de SafeBus. Para soportar la navegación y las pruebas funcionales de las interfaces, el equipo utilizó datos mock y servicios simulados que representan el comportamiento esperado del futuro RESTful API de UrbanGuard.
+
+A continuación se documentan los principales endpoints REST simulados considerados para las funcionalidades implementadas durante este sprint:
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Endpoint</th>
+    <th>Verb HTTP</th>
+    <th>Descripción</th>
+    <th>Ejemplo de Response</th>
+  </tr>
+  <tr>
+    <td>/drivers</td>
+    <td>GET</td>
+    <td>Retorna la lista de conductores registrados para la gestión administrativa.</td>
+    <td>{ "id": "drv-01", "name": "Carlos Ramos", "employeeCode": "SB-2048", "status": "active" }</td>
+  </tr>
+  <tr>
+    <td>/drivers?employeeCode=SB-2048</td>
+    <td>GET</td>
+    <td>Simula la validación de identidad del conductor mediante código de empleado o QR.</td>
+    <td>{ "id": "drv-01", "name": "Carlos Ramos", "authorized": true, "assignedVehicleId": "bus-12" }</td>
+  </tr>
+  <tr>
+    <td>/vehicles</td>
+    <td>GET</td>
+    <td>Retorna las unidades de transporte registradas con su estado operativo.</td>
+    <td>{ "id": "bus-12", "plate": "ABC-123", "route": "Ruta 08", "status": "in_service" }</td>
+  </tr>
+  <tr>
+    <td>/vehicles/:id</td>
+    <td>GET</td>
+    <td>Retorna el detalle de una unidad, incluyendo conductor asignado, ubicación, velocidad y pasajeros a bordo.</td>
+    <td>{ "id": "bus-12", "plate": "ABC-123", "driverId": "drv-01", "passengers": 34, "speed": 42 }</td>
+  </tr>
+  <tr>
+    <td>/shifts</td>
+    <td>POST</td>
+    <td>Registra el inicio de servicio del conductor validado y asocia el turno a una unidad.</td>
+    <td>{ "id": "shift-1001", "driverId": "drv-01", "vehicleId": "bus-12", "status": "active" }</td>
+  </tr>
+  <tr>
+    <td>/shifts/:id</td>
+    <td>PATCH</td>
+    <td>Actualiza el estado del turno para registrar la finalización del servicio y generar el resumen operativo.</td>
+    <td>{ "id": "shift-1001", "status": "finished", "distanceKm": 42.5, "passengersTransported": 186 }</td>
+  </tr>
+  <tr>
+    <td>/alerts</td>
+    <td>GET</td>
+    <td>Retorna las alertas de emergencia recibidas por la central de monitoreo.</td>
+    <td>{ "id": "alt-501", "vehicleId": "bus-12", "priority": "critical", "status": "pending" }</td>
+  </tr>
+  <tr>
+    <td>/alerts</td>
+    <td>POST</td>
+    <td>Registra una alerta de pánico enviada por el conductor durante un turno activo.</td>
+    <td>{ "id": "alt-501", "shiftId": "shift-1001", "type": "panic_button", "sent": true }</td>
+  </tr>
+  <tr>
+    <td>/alerts/:id</td>
+    <td>PATCH</td>
+    <td>Actualiza el estado de atención de una alerta desde el panel administrativo.</td>
+    <td>{ "id": "alt-501", "status": "resolved", "responseTimeSeconds": 95 }</td>
+  </tr>
+  <tr>
+    <td>/passenger-counts?vehicleId=bus-12</td>
+    <td>GET</td>
+    <td>Retorna el conteo actual e histórico de pasajeros para una unidad en servicio.</td>
+    <td>{ "vehicleId": "bus-12", "currentPassengers": 34, "capacity": 50, "updatedAt": "2026-05-12T20:00:00Z" }</td>
+  </tr>
+  <tr>
+    <td>/metrics</td>
+    <td>GET</td>
+    <td>Retorna los indicadores principales del dashboard administrativo y de impacto.</td>
+    <td>{ "activeUnits": 12, "activeAlerts": 3, "averageOccupancy": 68, "protectedDrivers": 48 }</td>
+  </tr>
+</table>
+
+Estos endpoints sirvieron como referencia para conectar las vistas del conductor y del administrador con datos estructurados durante la revisión del Sprint 2. La implementación formal del RESTful API con Spring Boot será abordada en el Sprint 3, manteniendo como base los recursos definidos para validación de conductores, gestión de unidades, turnos, alertas, ocupación y métricas del sistema.
 
 ##### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-> *[Pendiente de completar]*
+Durante el Sprint 2 se realizó el despliegue de la Frontend Web Application de SafeBus en Vercel, con el objetivo de validar las funcionalidades implementadas en un entorno público y accesible para el equipo. Este despliegue permitió revisar los flujos principales del sistema, como la validación del conductor, el panel administrativo, el centro de control, la gestión de unidades, las alertas y el conteo de pasajeros desde una URL de producción.
+
+**Pasos realizados para el despliegue:**
+
+1. Se preparó la aplicación frontend de SafeBus con las funcionalidades desarrolladas durante el Sprint 2, incluyendo las vistas del conductor y del administrador.
+
+2. Se conectó el repositorio del frontend con Vercel para generar el despliegue automático de la aplicación.
+
+3. Se ejecutó el build de producción y se verificó que el despliegue quedara disponible correctamente en el dominio público asignado.
+
+4. Se validó el acceso a la aplicación desplegada mediante la navegación por el dashboard administrativo y las secciones principales implementadas en el sprint.
+
+
+**URL de despliegue del frontend:**
+[https://safebus-frontend.vercel.app/](https://safebus-frontend.vercel.app/)
+
+
+A continuación se presenta la evidencia del despliegue del frontend en Vercel:
+
+![Vercel Frontend Deployment](Resources/img/Vercel-Frontend-Deployment.jpeg)
+*Figura 5.2.2.7.1: Despliegue de producción de la Frontend Web Application de SafeBus en Vercel, mostrando el dashboard administrativo del sistema disponible desde safebus-frontend.vercel.app.*
+
 
 ##### 5.2.2.8. Team Collaboration Insights during Sprint
 
