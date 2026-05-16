@@ -370,13 +370,13 @@ Además, se realizó la integración completa con la Landing Page existente, per
 
 Principales funcionalidades implementadas:
 
---Sistema de autenticación completo (login, registro y gestión de sesiones)
---Gestión de perfiles de conductores y administradores
---Sistema de alertas y botones de pánico en tiempo real
---Monitoreo de cantidad de pasajeros mediante sensores de conteo
---Visualización del estado y nivel de riesgo de las unidades de transporte
---Panel de control para supervisión de incidentes y alertas
---Integración completa con la Landing Page
+- **Sistema de autenticación completo (login, registro y gestión de sesiones)**
+- **Gestión de perfiles de conductores y administradores**
+- **Sistema de alertas y botones de pánico en tiempo real**
+- **Monitoreo de cantidad de pasajeros mediante sensores de conteo**
+- **Visualización del estado y nivel de riesgo de las unidades de transporte**
+- **Panel de control para supervisión de incidentes y alertas**
+- **Integración completa con la Landing Page**
 
 ##### 5.2.2.5. Execution Evidence for Sprint Review
 
@@ -556,9 +556,64 @@ A continuación se presenta la evidencia del despliegue del frontend en Vercel:
 
 ##### 5.2.2.8. Team Collaboration Insights during Sprint
 
-> *[Pendiente de completar]*
---
+**Organización Estratégica del Equipo**
 
+El trabajo se organizó de manera estratégica, asignando a cada integrante módulos específicos según sus fortalezas técnicas y experiencia en el desarrollo frontend del sistema SafeBus:
+
+- **Boris lideró el desarrollo del sistema de autenticación y seguridad, implementando el control de acceso y la protección de datos de los usuarios.**
+- **Fernando se especializó en el dashboard principal y monitoreo en tiempo real, enfocándose en la visualización de alertas, métricas y estados de riesgo de las unidades de transporte.**
+- **Leonardo desarrolló el núcleo del sistema de monitoreo de buses, implementando los modelos y repositorios relacionados con sensores, conteo de pasajeros y gestión de unidades.**
+-**Carlos implementó la gestión de perfiles de usuarios y conductores, asegurando una experiencia personalizada y consistente dentro de la plataforma.**
+-**Ivonne desarrolló el sistema de configuraciones y preferencias, permitiendo la personalización y adaptación de la aplicación según las necesidades de los usuarios.**
+
+Permite trabajar en diferentes ramas sin afectar la rama principal del proyecto.
+
+# Arquitectura Implementada para SAFEBUS
+
+## PRESENTATION
+- Inicio de sesión y perfiles (`login`, `profile`, `register`)  
+- Panel principal y configuraciones (`dashboard`, `settings`)  
+- Gestión de buses y monitoreo (`bus-monitor`, `bus-detail`)  
+- Sistema de alertas y botones de pánico (`panic-alert`)  
+- Visualización de sensores y conteo de pasajeros (`passenger-counter`)  
+
+## GUARDS
+- Sistema de protección de rutas y autenticación  
+
+## COMPONENTS
+- Shell principal de la aplicación (`safebus-shell`)  
+
+## INFRASTRUCTURE
+- `Auth-http` (Boris)  
+- `Dashboard-http` (Fernando)  
+- `BusMonitor-http` (Leonardo)  
+- `Settings-http` (Ivonne)  
+- `Profile-http` (Carlos)  
+
+## DOMAIN
+- `Auth.model` (Boris)  
+- `Dashboard-summary.model` (Fernando)  
+- `Bus.model`, `Passenger-metrics.model`, `Alert.model` (Leonardo)  
+- `Settings.model` (Ivonne)  
+- `User-profile.model` (Carlos)  
+
+## REPOSITORIES
+- `Auth.repository` (Boris)  
+- `Dashboard.repository` (Fernando)  
+- `Bus.repository` (Leonardo)  
+- `Settings.repository` (Ivonne)  
+- `Profile.repository` (Carlos)  
+
+## APPLICATION
+- `Auth.facade` (Boris)  
+- `Dashboard.facade` (Fernando)  
+- `Bus.facade` (Leonardo)  
+- `Settings.facade` (Ivonne)  
+- `Profile.facade` (Carlos)  
+
+---
+
+El **Sprint 2** consolidó al equipo como una unidad técnica cohesiva especializada en desarrollo frontend con **Angular**, estableciendo bases arquitectónicas sólidas para el módulo **SafeBus** y sentando las bases para la futura integración con servicios backend y dispositivos IoT orientados a la seguridad en el transporte público.
 ### 5.3. Validation Interviews
 
 #### 5.3.1. Diseño de Entrevistas
