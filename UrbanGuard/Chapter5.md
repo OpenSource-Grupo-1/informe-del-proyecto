@@ -571,6 +571,181 @@ El trabajo se organizó de manera estratégica, asignando a cada integrante mód
 
 Permite trabajar en diferentes ramas sin afectar la rama principal del proyecto.
 
+#### 5.2.3. Sprint 3
+
+##### 5.2.3.1. Sprint Planning 3
+
+Para este tercer Sprint, el equipo estableció como objetivo principal el desarrollo e implementación del backend RESTful de SafeBus utilizando Spring Boot con arquitectura DDD+CQRS, y su integración con el frontend Angular desarrollado en el Sprint 2.
+
+##### 5.2.3.3. Sprint Backlog 3
+
+##### 5.2.3.4. Development Evidence for Sprint Review
+
+##### 5.2.3.5. Execution Evidence for Sprint Review
+
+En este sprint se lograron avances significativos en el desarrollo del backend de SafeBus. Se implementaron los endpoints RESTful de los 5 bounded contexts con su lógica de negocio correspondiente, asegurando la correcta persistencia de datos en MySQL. A continuación se presentan las evidencias técnicas del backend desarrollado durante este sprint.
+
+**1. Backend corriendo en IntelliJ IDEA Ultimate 2024.3.5**
+
+El proyecto Spring Boot inicia correctamente en el puerto 8080, conecta con MySQL 8.0 en localhost:3306 y crea automáticamente la base de datos `safebus_db` con sus 5 tablas.
+
+
+> *[Agregar capturas de pantalla...]*
+
+
+**2. Swagger UI con los 5 bounded contexts**
+
+Accesible en `http://localhost:8080/swagger-ui.html`, muestra todos los endpoints organizados por bounded context: **Employees**, **Alerts**, **Bus Units**, **Drivers** y **Sensors**.
+
+> *[Agregar captura de pantalla de Swagger UI]*
+
+**3. Tablas creadas automáticamente en MySQL Workbench**
+
+La base de datos `safebus_db` contiene las tablas `alerts`, `bus_units`, `drivers`, `employees` y `sensors`, creadas automáticamente por Hibernate al iniciar la aplicación.
+
+> *[Agregar captura de MySQL Workbench mostrando las tablas]*
+
+**4. Registro de empleados mediante Swagger**
+
+Los 7 empleados (EMP-001 a EMP-007) fueron registrados exitosamente mediante `POST /api/v1/employees`, con respuesta HTTP **201 Created** y persistencia verificada en MySQL. Hibernate confirma la inserción con los siguientes logs:
+
+
+> *[Agregar capturas de pantalla...]*
+
+##### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus con Spring Boot. Todos los endpoints están disponibles en Swagger UI (`http://localhost:8080/swagger-ui.html`).
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Bounded Context</th>
+    <th>Endpoint</th>
+    <th>Verb HTTP</th>
+    <th>Descripción</th>
+    <th>Response Example</th>
+  </tr>
+  <tr>
+    <td rowspan="4">IAM</td>
+    <td>/api/v1/employees</td>
+    <td>POST</td>
+    <td>Registra un nuevo empleado/conductor en el sistema.</td>
+    <td>{ "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "role": "CONDUCTOR" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/employees</td>
+    <td>GET</td>
+    <td>Retorna la lista completa de empleados registrados.</td>
+    <td>[ { "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "role": "CONDUCTOR" } ]</td>
+  </tr>
+  <tr>
+    <td>/api/v1/employees/{id}</td>
+    <td>GET</td>
+    <td>Retorna el detalle de un empleado por su ID.</td>
+    <td>{ "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "role": "CONDUCTOR" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/employees/code/{employeeCode}</td>
+    <td>GET</td>
+    <td>Valida la identidad del conductor por código de empleado. Utilizado por el login del frontend.</td>
+    <td>{ "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "role": "CONDUCTOR" }</td>
+  </tr>
+  <tr>
+    <td rowspan="5">AlertManagement</td>
+    <td>/api/v1/alerts</td>
+    <td>POST</td>
+    <td>Registra una alerta de emergencia (PANIC, EXTORTION, ROBBERY, ACCIDENT).</td>
+    <td>{ "id": 1, "employeeId": 1, "busUnitId": 1, "alertType": "PANIC", "status": "ACTIVE" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/alerts</td>
+    <td>GET</td>
+    <td>Retorna todas las alertas registradas en el sistema.</td>
+    <td>[ { "id": 1, "alertType": "PANIC", "status": "ACTIVE", "createdAt": "2026-06-12T22:05:00Z" } ]</td>
+  </tr>
+  <tr>
+    <td>/api/v1/alerts/{id}</td>
+    <td>GET</td>
+    <td>Retorna el detalle de una alerta por su ID.</td>
+    <td>{ "id": 1, "alertType": "PANIC", "status": "ACTIVE" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/alerts/employee/{employeeId}</td>
+    <td>GET</td>
+    <td>Retorna todas las alertas generadas por un empleado específico.</td>
+    <td>[ { "id": 1, "alertType": "PANIC", "status": "ACTIVE" } ]</td>
+  </tr>
+  <tr>
+    <td>/api/v1/alerts/{id}/resolve</td>
+    <td>PATCH</td>
+    <td>Marca una alerta como resuelta desde el panel administrativo.</td>
+    <td>{ "id": 1, "alertType": "PANIC", "status": "RESOLVED" }</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Monitoring</td>
+    <td>/api/v1/bus-units</td>
+    <td>POST</td>
+    <td>Registra una nueva unidad de bus con placa, ruta y coordenadas GPS iniciales.</td>
+    <td>{ "id": 1, "plateNumber": "ABC-1234", "route": "R-42", "status": "ACTIVE" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/bus-units</td>
+    <td>GET</td>
+    <td>Retorna todas las unidades de transporte registradas con su estado actual.</td>
+    <td>[ { "id": 1, "plateNumber": "ABC-1234", "route": "R-42", "status": "ACTIVE" } ]</td>
+  </tr>
+  <tr>
+    <td>/api/v1/bus-units/{id}/location</td>
+    <td>PATCH</td>
+    <td>Actualiza la ubicación GPS de una unidad en tiempo real.</td>
+    <td>{ "id": 1, "plateNumber": "ABC-1234", "currentLatitude": -12.0600, "currentLongitude": -77.0300 }</td>
+  </tr>
+  <tr>
+    <td rowspan="2">UserManagement</td>
+    <td>/api/v1/drivers</td>
+    <td>POST</td>
+    <td>Registra un conductor con número de licencia y asociación a un empleado.</td>
+    <td>{ "id": 1, "licenseNumber": "LIC-001", "fullName": "MARCOS E. SILVA", "status": "ACTIVE" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/drivers</td>
+    <td>GET</td>
+    <td>Retorna la lista de conductores registrados en el sistema.</td>
+    <td>[ { "id": 1, "licenseNumber": "LIC-001", "fullName": "MARCOS E. SILVA", "status": "ACTIVE" } ]</td>
+  </tr>
+  <tr>
+    <td rowspan="4">IoTMonitoring</td>
+    <td>/api/v1/sensors</td>
+    <td>POST</td>
+    <td>Registra un sensor IoT (GPS, PANIC_BUTTON, CAMERA, ACCELEROMETER) asociado a una unidad de bus.</td>
+    <td>{ "id": 1, "sensorCode": "SEN-001", "sensorType": "GPS", "busUnitId": 1, "status": "ONLINE" }</td>
+  </tr>
+  <tr>
+    <td>/api/v1/sensors</td>
+    <td>GET</td>
+    <td>Retorna todos los sensores registrados en el sistema.</td>
+    <td>[ { "id": 1, "sensorCode": "SEN-001", "sensorType": "GPS", "status": "ONLINE" } ]</td>
+  </tr>
+  <tr>
+    <td>/api/v1/sensors/bus-unit/{busUnitId}</td>
+    <td>GET</td>
+    <td>Retorna los sensores asociados a una unidad de bus específica.</td>
+    <td>[ { "id": 1, "sensorType": "GPS" }, { "id": 2, "sensorType": "PANIC_BUTTON" } ]</td>
+  </tr>
+  <tr>
+    <td>/api/v1/sensors/{id}/reading</td>
+    <td>PATCH</td>
+    <td>Actualiza la última lectura registrada por un sensor IoT.</td>
+    <td>{ "id": 1, "sensorCode": "SEN-001", "lastReading": "-12.0464,-77.0428", "status": "ONLINE" }</td>
+  </tr>
+</table>
+
+##### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+
+##### 5.2.3.8. Team Collaboration Insights during Sprint
+
+
+
 # Arquitectura Implementada para SAFEBUS
 
 ## PRESENTATION
