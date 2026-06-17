@@ -575,7 +575,7 @@ Permite trabajar en diferentes ramas sin afectar la rama principal del proyecto.
 
 ##### 5.2.3.1. Sprint Planning 3
 
-Para este tercer Sprint, el equipo estableció como objetivo principal el desarrollo e implementación del backend RESTful de SafeBus utilizando Spring Boot con arquitectura DDD+CQRS, y su integración con el frontend Angular desarrollado en el Sprint 2.
+Para este tercer Sprint, el equipo estableció como objetivo principal el desarrollo e implementación del backend RESTful de SafeBus utilizando Spring Boot con arquitectura DDD+CQRS, exponiendo los endpoints necesarios para cada bounded context del sistema
 
 ##### 5.2.3.3. Sprint Backlog 3
 
@@ -590,31 +590,48 @@ En este sprint se lograron avances significativos en el desarrollo del backend d
 El proyecto Spring Boot inicia correctamente en el puerto 8080, conecta con MySQL 8.0 en localhost:3306 y crea automáticamente la base de datos `safebus_db` con sus 5 tablas.
 
 
-> *[Agregar capturas de pantalla...]*
-
+> *[Agregar captura de IntelliJ con el backend corriendo]*
 
 **2. Swagger UI con los 5 bounded contexts**
 
-Accesible en `http://localhost:8080/swagger-ui.html`, muestra todos los endpoints organizados por bounded context: **Employees**, **Alerts**, **Bus Units**, **Drivers** y **Sensors**.
+Accesible en `http://localhost:8080/swagger-ui.html`, muestra todos los endpoints organizados por bounded context: **Employees**, **Alerts**, **Bus Units**, **Drivers** y **Sensors**, con soporte para ejecutar peticiones directamente desde el navegador.
 
-> *[Agregar captura de pantalla de Swagger UI]*
+> *[Agregar captura de Swagger UI mostrando los 5 bounded contexts]*
 
 **3. Tablas creadas automáticamente en MySQL Workbench**
 
-La base de datos `safebus_db` contiene las tablas `alerts`, `bus_units`, `drivers`, `employees` y `sensors`, creadas automáticamente por Hibernate al iniciar la aplicación.
+La base de datos `safebus_db` contiene las tablas `alerts`, `bus_units`, `drivers`, `employees` y `sensors`, creadas automáticamente por Hibernate al iniciar la aplicación. Verificadas ejecutando:
+
+```sql
+USE safebus_db;
+SELECT * FROM employees;
+SELECT * FROM alerts;
+SELECT * FROM bus_units;
+SELECT * FROM drivers;
+SELECT * FROM sensors;
+```
 
 > *[Agregar captura de MySQL Workbench mostrando las tablas]*
 
 **4. Registro de empleados mediante Swagger**
 
-Los 7 empleados (EMP-001 a EMP-007) fueron registrados exitosamente mediante `POST /api/v1/employees`, con respuesta HTTP **201 Created** y persistencia verificada en MySQL. Hibernate confirma la inserción con los siguientes logs:
-
+Los 7 empleados (EMP-001 a EMP-007) fueron registrados exitosamente mediante `POST /api/v1/employees`, con respuesta HTTP **201 Created** y persistencia verificada en MySQL. Hibernate confirma la inserción con los siguientes logs en IntelliJ:
 
 > *[Agregar capturas de pantalla...]*
 
+
+**5. Verificación de datos en MySQL Workbench**
+
+Tras registrar los 7 empleados vía Swagger, se verificó su persistencia en MySQL Workbench ejecutando `SELECT * FROM employees`, confirmando que todos los registros fueron almacenados correctamente con sus campos: `id`, `employee_code`, `full_name`, `email`, `password`, `role`, `created_at` y `updated_at`.
+
+> *[Agregar captura de MySQL Workbench con los 7 empleados registrados]*
+
+---
+
+
 ##### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus con Spring Boot. Todos los endpoints están disponibles en Swagger UI (`http://localhost:8080/swagger-ui.html`).
+Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus con Spring Boot. Todos los endpoints están disponibles en Swagger UI (`http://localhost:8080/swagger-ui.html`). A continuación se detallan los endpoints implementados por bounded context:
 
 <table border="1" cellpadding="6" cellspacing="0">
   <tr>
@@ -629,7 +646,7 @@ Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus co
     <td>/api/v1/employees</td>
     <td>POST</td>
     <td>Registra un nuevo empleado/conductor en el sistema.</td>
-    <td>{ "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "role": "CONDUCTOR" }</td>
+    <td>{ "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "email": "emp001@safebus.com", "role": "CONDUCTOR" }</td>
   </tr>
   <tr>
     <td>/api/v1/employees</td>
@@ -646,7 +663,7 @@ Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus co
   <tr>
     <td>/api/v1/employees/code/{employeeCode}</td>
     <td>GET</td>
-    <td>Valida la identidad del conductor por código de empleado. Utilizado por el login del frontend.</td>
+    <td>Valida la identidad del conductor por código de empleado.</td>
     <td>{ "id": 1, "employeeCode": "EMP-001", "fullName": "MARCOS E. SILVA", "role": "CONDUCTOR" }</td>
   </tr>
   <tr>
@@ -666,7 +683,7 @@ Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus co
     <td>/api/v1/alerts/{id}</td>
     <td>GET</td>
     <td>Retorna el detalle de una alerta por su ID.</td>
-    <td>{ "id": 1, "alertType": "PANIC", "status": "ACTIVE" }</td>
+    <td>{ "id": 1, "alertType": "PANIC", "status": "ACTIVE", "latitude": -12.0464 }</td>
   </tr>
   <tr>
     <td>/api/v1/alerts/employee/{employeeId}</td>
@@ -738,6 +755,8 @@ Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus co
     <td>{ "id": 1, "sensorCode": "SEN-001", "lastReading": "-12.0464,-77.0428", "status": "ONLINE" }</td>
   </tr>
 </table>
+
+---
 
 ##### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
