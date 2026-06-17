@@ -589,14 +589,15 @@ En este sprint se lograron avances significativos en el desarrollo del backend d
 
 El proyecto Spring Boot inicia correctamente en el puerto 8080, conecta con MySQL 8.0 en localhost:3306 y crea automáticamente la base de datos `safebus_db` con sus 5 tablas.
 
-
-> *[Agregar captura de IntelliJ con el backend corriendo]*
+<img src="Resources/img/IntellijCorriendo.png">
 
 **2. Swagger UI con los 5 bounded contexts**
 
 Accesible en `http://localhost:8080/swagger-ui.html`, muestra todos los endpoints organizados por bounded context: **Employees**, **Alerts**, **Bus Units**, **Drivers** y **Sensors**, con soporte para ejecutar peticiones directamente desde el navegador.
 
-> *[Agregar captura de Swagger UI mostrando los 5 bounded contexts]*
+<img src="Resources/img/Swagber1.png">
+
+<img src="Resources/img/Swagber2.png">
 
 **3. Tablas creadas automáticamente en MySQL Workbench**
 
@@ -611,20 +612,31 @@ SELECT * FROM drivers;
 SELECT * FROM sensors;
 ```
 
-> *[Agregar captura de MySQL Workbench mostrando las tablas]*
+
+
+
+<img src="Resources/img/SqlAlertas.png">
+
+<img src="Resources/img/SqlDrivers.png">
+
+<img src="Resources/img/SqlSensores.png">
+
+<img src="Resources/img/SqlBusUnit.png">
+
 
 **4. Registro de empleados mediante Swagger**
 
 Los 7 empleados (EMP-001 a EMP-007) fueron registrados exitosamente mediante `POST /api/v1/employees`, con respuesta HTTP **201 Created** y persistencia verificada en MySQL. Hibernate confirma la inserción con los siguientes logs en IntelliJ:
 
-> *[Agregar capturas de pantalla...]*
+<img src="Resources/img/RegistroEmpleados
+.png">
 
 
 **5. Verificación de datos en MySQL Workbench**
 
 Tras registrar los 7 empleados vía Swagger, se verificó su persistencia en MySQL Workbench ejecutando `SELECT * FROM employees`, confirmando que todos los registros fueron almacenados correctamente con sus campos: `id`, `employee_code`, `full_name`, `email`, `password`, `role`, `created_at` y `updated_at`.
 
-> *[Agregar captura de MySQL Workbench con los 7 empleados registrados]*
+<img src="Resources/img/SqlEmployees.png">
 
 ---
 
