@@ -628,8 +628,7 @@ SELECT * FROM sensors;
 
 Los 7 empleados (EMP-001 a EMP-007) fueron registrados exitosamente mediante `POST /api/v1/employees`, con respuesta HTTP **201 Created** y persistencia verificada en MySQL. Hibernate confirma la inserción con los siguientes logs en IntelliJ:
 
-<img src="Resources/img/RegistroEmpleados
-.png">
+<img src="Resources/img/RegistroEmpleados.png">
 
 
 **5. Verificación de datos en MySQL Workbench**
@@ -768,6 +767,7 @@ Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus co
   </tr>
 </table>
 
+<img src="Resources/img/BoundedContext.png">
 ---
 
 ##### 5.2.3.7. Software Deployment Evidence for Sprint Review
