@@ -579,7 +579,45 @@ Para este tercer Sprint, el equipo estableció como objetivo principal el desarr
 
 ##### 5.2.3.3. Sprint Backlog 3
 
+El objetivo principal de este Sprint fue desarrollar el backend RESTful de SafeBus con Spring Boot siguiendo la arquitectura DDD+CQRS del proyecto de referencia del profesor, implementando los 5 bounded contexts con sus respectivos aggregates, commands, queries, services, repositories y controllers REST.
+
+| Sprint # | Sprint 3 | | | | | | |
+|---|---|-|-|-|-|-|-|
+| **User Story** | | **Work-item / Task** | | | | | |
+| Id | Title | Id | Title | Description | Estimation | Assigned To | Status |
+| US-10 | Endpoint de validación de conductor | T10-1 | Configuración proyecto Spring Boot | Crear proyecto con Java 26, Spring Boot 4.0.6, dependencias JPA, MySQL, Lombok, SpringDoc y pluralize. Configurar application.properties con conexión a MySQL y SnakeCasePhysicalNamingStrategy. | 4h | Carlos Blancas | Done |
+| US-10 | Endpoint de validación de conductor | T10-2 | Implementar BC IAM - Employee | Crear aggregate Employee con commands, queries, services, repository y controller REST. Implementar endpoints GET/POST y búsqueda por código de empleado. | 5h | Carlos Blancas | Done |
+| US-12 | Endpoint de alerta de emergencia | T12-1 | Implementar BC AlertManagement - Alert | Crear aggregate Alert con tipos PANIC, EXTORTION, ROBBERY, ACCIDENT. Implementar commands, queries, services, repository y controller REST con endpoints GET/POST/PATCH. | 5h | Boris Alvarado | Done |
+| US-11 | Endpoint de inicio de servicio | T11-1 | Implementar BC Monitoring - BusUnit | Crear aggregate BusUnit con seguimiento GPS. Implementar commands, queries, services, repository y controller REST con endpoints GET/POST/PATCH para actualización de ubicación. | 5h | Leonardo Delgado | Done |
+| US-13 | Endpoint de conteo de pasajeros | T13-1 | Implementar BC IoTMonitoring - Sensor | Crear aggregate Sensor con tipos GPS, PANIC_BUTTON, CAMERA, ACCELEROMETER. Implementar commands, queries, services, repository y controller REST con endpoints GET/POST/PATCH. | 4h | Fernando Espíritu | Done |
+| US-47 | Endpoint de actualización de conductor | T47-1 | Implementar BC UserManagement - Driver | Crear aggregate Driver con número de licencia y asociación a empleado. Implementar commands, queries, services, repository y controller REST con endpoints GET/POST. | 4h | Ivonne Ibañez | Done |
+| US-22 | Endpoint de autenticación | T22-1 | Configurar MySQL y CORS global | Configurar datasource con createDatabaseIfNotExist=true, ddl-auto=update y habilitar CORS para localhost:4200 y safebus-frontend.vercel.app. | 2h | Carlos Blancas | Done |
+| US-05 | Registro de evento de emergencia | T05-1 | Configurar Swagger UI y SpringDoc | Configurar SpringDoc OpenAPI para documentar automáticamente todos los endpoints del backend en Swagger UI. | 2h | Carlos Blancas | Done |
+| US-20 | Endpoint para consulta del estado del vehículo | T20-1 | Implementar shared Result y SnakeCaseStrategy | Implementar clase genérica Result<T,E> para manejo de errores en commands y SnakeCasePhysicalNamingStrategy para nombres de tablas. | 3h | Carlos Blancas | Done |
+
 ##### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3, el equipo se enfocó en el desarrollo del backend RESTful de SafeBus utilizando **Spring Boot 4.0.6 con Java 26**, siguiendo la arquitectura **DDD + CQRS** del proyecto de referencia del profesor (catch-up-platform). Se implementaron los 5 bounded contexts planificados, cada uno con su estructura completa de capas:
+
+<img src="Resources/img/BoundedContext.png">
+
+La base de datos **MySQL 8.0** fue configurada para crearse automáticamente mediante `createDatabaseIfNotExist=true`. Las tablas son generadas por Hibernate al iniciar la aplicación gracias a `ddl-auto=update` y `SnakeCasePhysicalNamingStrategy`, generando nombres pluralizados en snake_case: `employees`, `bus_units`, `alerts`, `drivers` y `sensors`.
+
+Se implementó documentación automática de endpoints mediante **SpringDoc OpenAPI 3.0 / Swagger UI** accesible en `http://localhost:8080/swagger-ui.html`, permitiendo probar todos los endpoints directamente desde el navegador.
+
+| Repository | Branch | Commit ID | Commit Message | Author | Date |
+|---|---|---|---|---|---|
+| safebus-backend | feature/shared | a1b2c3d | feat(shared): add SnakeCasePhysicalNamingStrategy and Result generic | CarlosBlancas969 | 2026-06-03 |
+| safebus-backend | feature/iam | b2c3d4e | feat(iam): implement Employee aggregate with DDD+CQRS pattern | CarlosBlancas969 | 2026-06-03 |
+| safebus-backend | feature/iam | c3d4e5f | feat(iam): add EmployeesController with GET POST endpoints and code search | CarlosBlancas969 | 2026-06-03 |
+| safebus-backend | feature/alertmanagement | d4e5f6g | feat(alerts): implement Alert aggregate with PANIC EXTORTION ROBBERY ACCIDENT | BorisAlvaradoMilan | 2026-06-04 |
+| safebus-backend | feature/alertmanagement | e5f6g7h | feat(alerts): add AlertsController with resolve PATCH endpoint | BorisAlvaradoMilan | 2026-06-04 |
+| safebus-backend | feature/monitoring | f6g7h8i | feat(monitoring): implement BusUnit aggregate with GPS location tracking | leodev77 | 2026-06-05 |
+| safebus-backend | feature/monitoring | g7h8i9j | feat(monitoring): add BusUnitsController with location update PATCH | leodev77 | 2026-06-05 |
+| safebus-backend | feature/iotmonitoring | h8i9j0k | feat(iot): implement Sensor aggregate with GPS PANIC_BUTTON CAMERA ACCELEROMETER | Fernandovepro | 2026-06-06 |
+| safebus-backend | feature/usermanagement | i9j0k1l | feat(users): implement Driver aggregate with license number and employee association | MarlonLasarte | 2026-06-07 |
+| safebus-backend | develop | j0k1l2m | feat(cors): configure global CORS for localhost:4200 and vercel deployment | CarlosBlancas969 | 2026-06-08 |
+| safebus-backend | develop | k1l2m3n | feat(swagger): configure SpringDoc OpenAPI for all bounded contexts | CarlosBlancas969 | 2026-06-08 |
 
 ##### 5.2.3.5. Execution Evidence for Sprint Review
 
@@ -769,6 +807,11 @@ Durante el Sprint 3 se implementó y documentó el backend RESTful de SafeBus co
 
 <img src="Resources/img/BoundedContext.png">
 ---
+
+Vista del proyecto, organizada por módulos
+
+<img src="Resources/img/ConfPrincipalBackend.png">
+
 
 ##### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
