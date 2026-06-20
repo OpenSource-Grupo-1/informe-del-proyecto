@@ -815,6 +815,68 @@ Vista del proyecto, organizada por módulos
 
 ##### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
+Durante el Sprint 3 se logró desplegar satisfactoriamente el backend de SafeBus en la plataforma **Railway**, lo que permitió habilitar el acceso público a los endpoints desarrollados y documentados mediante Swagger UI. Esto garantiza que las funcionalidades implementadas puedan ser evaluadas y probadas externamente sin necesidad de ejecutar el proyecto de forma local.
+
+El despliegue contempla una instancia de servicio ejecutando la aplicación Spring Boot, junto con una base de datos MySQL gestionada por Railway y conectada mediante variables de entorno.
+
+**Entorno de Despliegue**
+
+- **Plataforma:** Railway
+- **Base de datos:** MySQL (gestionada por Railway)
+- **Tipo de despliegue:** Contenedor Docker generado automáticamente a partir del repositorio de GitHub
+- **CI/CD:** Auto-deploy en cada push a la rama `main`
+
+**Archivos de configuración clave**
+
+- `pom.xml`: Se ajustó la versión de Java de 26 a 21 para garantizar compatibilidad con el entorno de build de Railway, y se agregó el plugin `spring-boot-maven-plugin` para generar un JAR ejecutable con el manifest correcto.
+- `application.properties`: Se reemplazaron las credenciales de conexión fijas (localhost) por variables de entorno (`${SPRING_DATASOURCE_URL}`, `${SPRING_DATASOURCE_USERNAME}`, `${SPRING_DATASOURCE_PASSWORD}`) para permitir la conexión dinámica a la base de datos de producción.
+
+**Pasos realizados para el despliegue**
+
+1. Se creó el repositorio `safebus-backend` en la organización de GitHub del equipo y se subió el código fuente del backend.
+2. Se creó un nuevo proyecto en Railway y se conectó directamente al repositorio de GitHub mediante la integración oficial de Railway App, otorgando los permisos necesarios a nivel de organización.
+3. Railway detectó el proyecto Maven y ejecutó el build automáticamente. Se corrigieron dos errores de compatibilidad durante el proceso: la versión de Java (de 26 a 21) y la generación del JAR ejecutable.
+4. Se agregó un servicio de **MySQL** dentro del mismo proyecto de Railway, generando automáticamente las credenciales de conexión (host, puerto, usuario, contraseña y base de datos).
+5. Se configuraron las variables de entorno del servicio backend (`SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`) referenciando directamente las variables del servicio MySQL mediante la sintaxis `${{MySQL.VARIABLE}}` de Railway.
+6. Se generó el dominio público del servicio desde la sección **Networking**, obteniendo la URL: `https://safebus-backend-production.up.railway.app`.
+7. Se verificó el despliegue accediendo a la documentación interactiva de Swagger UI desde el dominio público generado.
+
+**Verificación de Despliegue**
+
+Se realizaron pruebas directamente en el entorno de producción de Railway, confirmando:
+
+- El correcto funcionamiento de los endpoints del backend a través del dominio público.
+- La persistencia adecuada de los datos en la base de datos MySQL gestionada por Railway.
+- La estabilidad del backend desplegado y su correcta accesibilidad a través de la web sin necesidad de configuración local.
+
+**Evidencia Visual**
+
+- Vista del proyecto en Railway con ambos servicios (`MySQL` y `safebus-backend`) en estado **Online**.
+
+  <img src="Resources/img/railway-project-online.jpeg">
+
+- Configuración de Networking mostrando el dominio público generado para el backend: `safebus-backend-production.up.railway.app`, escuchando en el puerto 8080.
+
+  <img src="Resources/img/railway-networking-domain.jpeg">
+
+- Variables de entorno configuradas en el servicio `safebus-backend`, referenciando dinámicamente las credenciales del servicio MySQL (`SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`).
+
+  <img src="Resources/img/railway-env-variables.jpeg">
+
+- Variables de entorno generadas automáticamente por Railway para el servicio MySQL (host, puerto, usuario, contraseña y base de datos).
+
+  <img src="Resources/img/railway-mysql-variables.jpeg">
+
+- Despliegue exitoso del backend tras aplicar las correcciones de versión de Java y configuración de variables de entorno.
+
+  <img src="Resources/img/railway-deploy-success.jpeg">
+
+- Documentación interactiva de Swagger UI accesible públicamente desde el dominio de Railway, mostrando los endpoints de los 5 bounded contexts (`Employees`, `Alerts`, `Bus Units`, `Drivers`, `Sensors`).
+
+  <img src="Resources/img/railway-swagger-public.png">
+
+**URL de despliegue del backend:**
+[https://safebus-backend-production.up.railway.app/swagger-ui.html](https://safebus-backend-production.up.railway.app/swagger-ui.html)
 
 ##### 5.2.3.8. Team Collaboration Insights during Sprint
 
