@@ -984,9 +984,6 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 6. Del 1 al 5, ¿qué tan probable sería utilizar esta aplicación durante sus jornadas? ¿Por qué?
 
 
-------------------------------------------------
-
-
 Segmento objetivo 2: Empresas / Consorcios de transporte público
 
 **Elementos a validar:**  
