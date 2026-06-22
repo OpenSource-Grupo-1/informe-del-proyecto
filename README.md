@@ -28,12 +28,12 @@
 
 ---
 
-## Registro de Versiones del Informe
-
 | Versión | Fecha | Autor/es | Descripción de Modificación |
 |---------|-------|----------|-----------------------------|
 | 0.1 | 05/04/2026 | Todos los integrantes | Agregación de: Carátula, Registro de Versiones del Informe, Project Report Collaboration Insights, Contenido (Índice), Student Outcome, Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Capítulo III: Requirements Specification, Capítulo IV: Product Design, Capítulo V: Product Implementation, Validation & Deployment. Avance de: Conclusiones, Bibliografía, Anexos. |
 | 0.2 | 05/05/2026 | Todos los integrantes | Sprint II |
+| 0.3 | 22/06/2026 | Todos los integrantes | Agregación de: Sprint 3 (Sprint Planning 3, Aspect Leaders and Collaborators, Sprint Backlog 3, Development Evidence for Sprint Review, Execution Evidence for Sprint Review, Services Documentation Evidence for Sprint Review, Software Deployment Evidence for Sprint Review y Team Collaboration Insights during Sprint), Validation Interviews (Diseño de Entrevistas, Registro de Entrevistas y Evaluaciones según heurísticas), Video About-the-Product. Avance de: Conclusiones, Bibliografía y Anexos. |
+
 
 ---
 </div>
@@ -59,6 +59,14 @@ Asimismo, todos los integrantes participaron activamente en la construcción del
 ### TB1
 
 Durante la elaboración de la tb1, el equipo estructuró la elaboración del informe mediante una distribución de tareas por secciones. Esta organización permitió trabajar simultáneamente en actividades de la spint 2, todos los integrantes contribuyeron activamente al proceso, realizando aportes constantes que favorecieron la coherencia y alineación entre las diferentes secciones del documento.
+
+### AV2
+
+Durante el desarrollo de la AV2, el equipo centró sus esfuerzos en la implementación del backend RESTful de SafeBus utilizando Spring Boot bajo una arquitectura DDD + CQRS, así como en la validación funcional y presentación integral del producto. Para ello, se organizó el trabajo mediante la asignación de bounded contexts, endpoints y módulos específicos a cada integrante, permitiendo un desarrollo paralelo y una integración progresiva del sistema.
+
+Asimismo, el equipo colaboró en la elaboración de evidencias técnicas relacionadas con el despliegue del backend, la documentación de servicios RESTful mediante Swagger UI, la validación heurística de la interfaz y la preparación de entrevistas de validación con usuarios. También se desarrolló el Video About-the-Product, el cual permitió presentar de manera integrada la propuesta de valor, funcionalidades y arquitectura del sistema SafeBus.
+
+La colaboración del equipo se evidencia en los commits realizados en GitHub, la integración de funcionalidades mediante ramas y pull requests, así como en la coordinación constante para mantener coherencia entre frontend, backend y documentación técnica del proyecto. Gracias a esta organización, se logró consolidar una versión funcional del sistema alineada con los objetivos académicos y técnicos planteados para la AV2.
 
 
 ---
@@ -140,7 +148,9 @@ Durante la elaboración de la tb1, el equipo estructuró la elaboración del inf
     - [5.1.2. Source Code Management.](UrbanGuard/Chapter5.md#512-source-code-management)
     - [5.1.3. Source Code Style Guide & Conventions.](UrbanGuard/Chapter5.md#513-source-code-style-guide--conventions)
     - [5.1.4. Software Deployment Configuration.](UrbanGuard/Chapter5.md#514-software-deployment-configuration)
+
 - [5.2. Landing Page, Services & Applications Implementation.](UrbanGuard/Chapter5.md#52-landing-page-services--applications-implementation)
+
     - [5.2.1. Sprint 1](UrbanGuard/Chapter5.md#521-sprint-1)
         - [5.2.1.1. Sprint Planning 1.](UrbanGuard/Chapter5.md#5211-sprint-planning-1)
         - [5.2.1.2. Aspect Leaders and Collaborators.](UrbanGuard/Chapter5.md#5212-aspect-leaders-and-collaborators)
@@ -150,6 +160,7 @@ Durante la elaboración de la tb1, el equipo estructuró la elaboración del inf
         - [5.2.1.6. Services Documentation Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5216-services-documentation-evidence-for-sprint-review)
         - [5.2.1.7. Software Deployment Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5217-software-deployment-evidence-for-sprint-review)
         - [5.2.1.8. Team Collaboration Insights during Sprint.](UrbanGuard/Chapter5.md#5218-team-collaboration-insights-during-sprint)
+
     - [5.2.2. Sprint 2](UrbanGuard/Chapter5.md#522-sprint-2)
         - [5.2.2.1. Sprint Planning 2.](UrbanGuard/Chapter5.md#5221-sprint-planning-2)
         - [5.2.2.2. Aspect Leaders and Collaborators.](UrbanGuard/Chapter5.md#5222-aspect-leaders-and-collaborators)
@@ -159,14 +170,31 @@ Durante la elaboración de la tb1, el equipo estructuró la elaboración del inf
         - [5.2.2.6. Services Documentation Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5226-services-documentation-evidence-for-sprint-review)
         - [5.2.2.7. Software Deployment Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5227-software-deployment-evidence-for-sprint-review)
         - [5.2.2.8. Team Collaboration Insights during Sprint.](UrbanGuard/Chapter5.md#5228-team-collaboration-insights-during-sprint)
-- [5.3. Validation Interviews](UrbanGuard/Chapter5.md#53-validation-interviews)
-  - [5.3.1. Diseño de Entrevistas](UrbanGuard/Chapter5.md#531-diseño-de-entrevistas)
-  - [5.3.2. Registro de Entrevistas](UrbanGuard/Chapter5.md#531-diseño-de-entrevistas)
-  - [5.3.3. Evaluaciones según heurísticas](UrbanGuard/Chapter5.md#533-evaluaciones-según-heurísticas)
-- [5.4. Video About-the-Product](UrbanGuard/Chapter5.md#54-video-about-the-product)
+
+    - [5.2.3. Sprint 3](UrbanGuard/Chapter5.md#523-sprint-3)
+        - [5.2.3.1. Sprint Planning 3.](UrbanGuard/Chapter5.md#5231-sprint-planning-3)
+        - [5.2.3.2. Aspect Leaders and Collaborators.](UrbanGuard/Chapter5.md#5232-aspect-leaders-and-collaborators)
+        - [5.2.3.3. Sprint Backlog 3.](UrbanGuard/Chapter5.md#5233-sprint-backlog-3)
+        - [5.2.3.4. Development Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5234-development-evidence-for-sprint-review)
+        - [5.2.3.5. Execution Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5235-execution-evidence-for-sprint-review)
+        - [5.2.3.6. Services Documentation Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5236-services-documentation-evidence-for-sprint-review)
+        - [5.2.3.7. Software Deployment Evidence for Sprint Review.](UrbanGuard/Chapter5.md#5237-software-deployment-evidence-for-sprint-review)
+        - [5.2.3.8. Team Collaboration Insights during Sprint.](UrbanGuard/Chapter5.md#5238-team-collaboration-insights-during-sprint)
+
+- [5.3. Validation Interviews.](UrbanGuard/Chapter5.md#53-validation-interviews)
+    - [5.3.1. Diseño de Entrevistas.](UrbanGuard/Chapter5.md#531-diseño-de-entrevistas)
+    - [5.3.2. Registro de Entrevistas.](UrbanGuard/Chapter5.md#532-registro-de-entrevistas)
+    - [5.3.3. Evaluaciones según heurísticas.](UrbanGuard/Chapter5.md#533-evaluaciones-según-heurísticas)
+
+- [5.4. Video About-the-Product.](UrbanGuard/Chapter5.md#54-video-about-the-product)
+
 - [Conclusiones y recomendaciones](UrbanGuard/6_Conclusions.md)
+
 - [Bibliografía](UrbanGuard/7_Bibliography.md)
+
 - [Anexos](UrbanGuard/8_Annexes.md)
+
+
 
 ---
 
@@ -175,9 +203,14 @@ Durante la elaboración de la tb1, el equipo estructuró la elaboración del inf
 En Ingeniería de Software el logro contribuye a alcanzar el Student Outcome EAC 3:
 > *"Demonstrates an ability to communicate effectively with a range of audiences"*
 
+
 | Criterio Específico | Acciones Realizadas | Conclusiones |
 |---------------------|---------------------|--------------|
-| 3.c1. Comunica oralmente con efectividad a diferentes rangos de audiencia | Delgado, Leonardo - tb1:Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. / Alvarado, Boris - tb1:Development Evidence for Sprint Review. Team Collaboration Insights during Sprint. / Ibañez, Ivonne - tb1:Sprint Planning 2. Aspect Leaders and Collaborators. / Blancas, Carlos - tb1: Sprint Backlog 2./ Espiritu, Fernando - tb1: Execution Evidence for Sprint Review. | Durante las entregas AV1 y TB1, el equipo fortaleció sus habilidades de comunicación técnica en contextos de alta exigencia. En la AV1, el enfoque estuvo orientado a la interacción y validación con usuarios finales; posteriormente, en la TB1, se reforzó la capacidad para justificar decisiones arquitectónicas complejas y responder de manera estructurada a observaciones técnicas críticas frente a una audiencia especializada.|
-| 3.c2. Comunica por escrito con efectividad a diferentes rangos de audiencia | Delgado, Leonardo - tb1:Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. / Alvarado, Boris - tb1:Development Evidence for Sprint Review. Team Collaboration Insights during Sprint. / Ibañez, Ivonne - tb1:Sprint Planning 2. Aspect Leaders and Collaborators. / Blancas, Carlos - tb1: Sprint Backlog 2./ Espiritu, Fernando - tb1: Execution Evidence for Sprint Review.| La comunicación escrita alcanzó un mayor nivel de profundidad técnica durante la TB1. La elaboración de los Bounded Contexts y la integración de diagramas estructurales demostraron la capacidad del equipo para organizar y presentar información compleja de manera clara y coherente, adaptando el lenguaje técnico tanto para desarrolladores como para evaluadores académicos especializados. |
+| 3.c1. Comunica oralmente con efectividad a diferentes rangos de audiencia | Delgado, Leonardo - tb1:Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. / Alvarado, Boris - tb1:Development Evidence for Sprint Review. Team Collaboration Insights during Sprint. / Ibañez, Ivonne - tb1:Sprint Planning 2. Aspect Leaders and Collaborators. / Blancas, Carlos - tb1: Sprint Backlog 2./ Espiritu, Fernando - tb1: Execution Evidence for Sprint Review. / Delgado, Leonardo - av2: Execution Evidence for Sprint Review y Software Deployment Evidence for Sprint Review. / Alvarado, Boris - av2: Services Documentation Evidence for Sprint Review y Team Collaboration Insights during Sprint. / Ibañez, Ivonne - av2: Sprint Planning 3, Aspect Leaders and Collaborators y Validation Interviews. / Blancas, Carlos - av2: Sprint Backlog 3 y Development Evidence for Sprint Review. / Espíritu, Fernando - av2: Video About-the-Product y Evaluaciones según heurísticas. | Durante las entregas AV1, TB1 y AV2, el equipo fortaleció progresivamente sus habilidades de comunicación oral en contextos técnicos y académicos. En la AV1 se priorizó la validación con usuarios y la presentación inicial de la propuesta; en la TB1 se consolidó la capacidad para explicar decisiones arquitectónicas y funcionalidades del frontend; finalmente, en la AV2, el equipo logró comunicar de manera efectiva la arquitectura DDD + CQRS, el funcionamiento del backend RESTful y la integración completa del sistema SafeBus mediante demostraciones funcionales, entrevistas y el Video About-the-Product. |
+| 3.c2. Comunica por escrito con efectividad a diferentes rangos de audiencia | Delgado, Leonardo - tb1:Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. / Alvarado, Boris - tb1:Development Evidence for Sprint Review. Team Collaboration Insights during Sprint. / Ibañez, Ivonne - tb1:Sprint Planning 2. Aspect Leaders and Collaborators. / Blancas, Carlos - tb1: Sprint Backlog 2./ Espiritu, Fernando - tb1: Execution Evidence for Sprint Review. / Delgado, Leonardo - av2: Execution Evidence for Sprint Review y Software Deployment Evidence for Sprint Review. / Alvarado, Boris - av2: Services Documentation Evidence for Sprint Review y Team Collaboration Insights during Sprint. / Ibañez, Ivonne - av2: Sprint Planning 3, Aspect Leaders and Collaborators y Validation Interviews. / Blancas, Carlos - av2: Sprint Backlog 3 y Development Evidence for Sprint Review. / Espíritu, Fernando - av2: Video About-the-Product y Evaluaciones según heurísticas. | La comunicación escrita evolucionó progresivamente a lo largo de las entregas AV1, TB1 y AV2. Durante la TB1 se fortaleció la documentación técnica relacionada con frontend, bounded contexts y diseño arquitectónico; posteriormente, en la AV2, el equipo profundizó en la documentación de endpoints RESTful, arquitectura DDD + CQRS, despliegue backend, validaciones heurísticas y evidencias funcionales. Esto permitió presentar información compleja de manera clara, organizada y adecuada para diferentes tipos de audiencia, incluyendo usuarios, desarrolladores y evaluadores académicos. |
+
+
+
+
 
 
