@@ -971,16 +971,17 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 
 **Preguntas de validación**
 
-1. ¿Fue claro dónde revisar su turno y ruta asignada?
-2. ¿La información previa al servicio es suficiente para realizar su trabajo?
-3. ¿El inicio y cierre del turno fue rápido y sencillo?
-4. ¿Podría enviar una alerta fácilmente desde la aplicación?
-5. ¿La confirmación de alerta genera confianza?
-6. ¿La información en tiempo real ayuda durante el recorrido?
-7. ¿El registro de pasajeros reemplazaría procesos manuales?
-8. ¿Encontró algún botón o pantalla difícil de entender?
-9. Del 1 al 5, ¿qué tan útil considera la aplicación? ¿Por qué?
-10. ¿Qué función agregaría o mejoraría?
+1. ¿La información mostrada al iniciar sesión (turno, ruta y unidad) le permite entender rápidamente el servicio que debe realizar?
+
+2. ¿El proceso de iniciar y finalizar un turno le parece sencillo y adecuado para su trabajo diario?
+
+3. ¿Al registrar una emergencia o enviar una alerta considera que podría hacerlo fácilmente durante una situación real?
+
+4. ¿La información del recorrido y estado del servicio en tiempo real le ayudaría a realizar mejor su trabajo?
+
+5. ¿Qué parte de la aplicación considera más útil y qué aspecto cambiaría o mejoraría?
+
+6. Del 1 al 5, ¿qué tan probable sería utilizar esta aplicación durante sus jornadas? ¿Por qué?
 
 
 ------------------------------------------------
@@ -1031,17 +1032,17 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 
 **Preguntas de validación**
 
-1. ¿Quedó claro qué problema del transporte público resuelve SafeBus?
-2. ¿Fue sencillo identificar las funciones principales del dashboard?
-3. ¿La información de conductores, unidades y turnos está organizada?
-4. ¿El historial de turnos ayuda a controlar operaciones?
-5. ¿El estado de servicios permite detectar problemas rápido?
-6. ¿La información de alertas permite tomar decisiones?
-7. ¿El centro de control mejora la supervisión de la flota?
-8. ¿Los reportes ayudan a evaluar el rendimiento?
-9. ¿Encontró alguna sección confusa dentro del sistema?
-10. Del 1 al 5, ¿qué tan probable sería implementar SafeBus?
-11. ¿Qué funcionalidad agregaría o mejoraría?
+1. ¿El dashboard permite encontrar fácilmente la información necesaria para controlar conductores, unidades y servicios?
+
+2. ¿La gestión de turnos e historial de operaciones ayudaría a mejorar el control de la empresa?
+
+3. ¿La información mostrada en una alerta es suficiente para tomar decisiones ante una incidencia?
+
+4. ¿La visualización del estado de vehículos y servicios en tiempo real facilitaría la supervisión de la flota?
+
+5. ¿Qué funcionalidad del sistema considera más importante y qué aspecto debería mejorarse?
+
+6. Del 1 al 5, ¿qué tan probable sería implementar SafeBus en su empresa? ¿Por qué?
 #### 5.3.2. Registro de Entrevistas
 
 > *[Pendiente de completar]*
