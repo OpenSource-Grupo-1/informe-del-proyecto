@@ -932,12 +932,12 @@ El **Sprint 2** consolidó al equipo como una unidad técnica cohesiva especiali
 
 #### 5.3.1. Diseño de Entrevistas
 
-# Segmento objetivo 1: Conductores (Operarios de transporte público)
+ ##Segmento objetivo 1: Conductores (Operarios de transporte público)
 
-## Elementos a validar:
+###Elementos a validar:
 Aplicación móvil del conductor y experiencia operativa durante el servicio.
 
----
+
 
 ## User Flows a validar:
 
