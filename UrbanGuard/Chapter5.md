@@ -932,7 +932,7 @@ El **Sprint 2** consolidó al equipo como una unidad técnica cohesiva especiali
 
 #### 5.3.1. Diseño de Entrevistas
 
-Segmento objetivo 1: Conductores (Operarios de transporte público)
+**Segmento objetivo 1: Conductores (Operarios de transporte público)**
 
 **Elementos a validar:**  
 Aplicación móvil del conductor y experiencia operativa durante el servicio.
@@ -976,7 +976,8 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 5. ¿Qué parte de la aplicación considera más útil y qué debería mejorar?
 6. Del 1 al 5, ¿qué tan probable sería utilizar esta aplicación durante sus jornadas? ¿Por qué?
 
-Segmento objetivo 2: Empresas / Consorcios de transporte público
+
+**Segmento objetivo 2: Empresas / Consorcios de transporte público**
 
 **Elementos a validar:**  
 Landing Page y Panel Administrativo Web (Dashboard SafeBus).
@@ -1025,7 +1026,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 4. ¿La visualización del estado de vehículos y servicios en tiempo real facilita la supervisión?
 5. ¿Qué funcionalidad considera más importante y qué aspecto debería mejorarse?
 6. Del 1 al 5, ¿qué tan probable sería implementar SafeBus en su empresa? ¿Por qué?
-7. 
+
 #### 5.3.2. Registro de Entrevistas
 
 > *[Pendiente de completar]*
