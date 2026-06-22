@@ -1093,6 +1093,21 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **URL:** h[ttps://upcedupe-my.sharepoint.com/:v:/g/personal/u202323243_upc_edu_pe/IQDvG7qcbLA4SpbyXvgeLP6zAZK4JCsJsvKpmLwuEPqTFp4?e=TL1NWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://youtu.be/eNBxgPOn_I4) 
 - **Resumen:** Caro percibe que toda la aplicación es clara, directa y fácil de usar. Desde la landing page siente que la información está bien explicada y no encuentra ningún obstáculo para entender las funciones gratuitas ni para navegar. El formulario de registro le parece rápido y lógico, con los datos justos y necesarios. Al llegar al dashboard, entiende de inmediato cómo moverse entre secciones y considera que agregar una ruta es un proceso muy intuitivo, ya que todo está ordenado y bien identificado. También interpreta el módulo de administrador como una herramienta útil para organizar sus seguiminentos y anotar fechas, complicaciones y prioridades. En resumen, su impresión global es positiva: siente que la plataforma es sencilla, funcional y pensada para que cualquier usuario la pueda utilizar sin complicaciones.   
 
+##### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 3, el equipo trabajó de manera colaborativa en la implementación del backend RESTful de SafeBus utilizando Spring Boot bajo la arquitectura DDD + CQRS. La organización del trabajo se realizó mediante bounded contexts y ramas específicas en GitHub, permitiendo que cada integrante desarrollara funcionalidades independientes sin afectar la integración general del sistema.
+
+* **Carlos Blancas** lideró la configuración inicial del proyecto backend, incluyendo la integración de Spring Boot, configuración de MySQL, CORS global, Swagger UI y la implementación del bounded context IAM relacionado con empleados y autenticación.
+* **Boris Alvarado** desarrolló el bounded context **AlertManagement**, implementando la gestión de alertas de emergencia, endpoints RESTful y actualización del estado de incidentes mediante comandos y queries.
+* **Leonardo Delgado** trabajó en el bounded context **Monitoring**, desarrollando la gestión de unidades de transporte, monitoreo GPS y actualización de ubicación de buses en tiempo real.
+* **Fernando Espíritu** implementó el bounded context **IoTMonitoring**, desarrollando la gestión de sensores del sistema, incluyendo sensores GPS, botones de pánico, cámaras y acelerómetros.
+* **Ivonne Ibañez** desarrolló el bounded context **UserManagement**, implementando la gestión de conductores, asociación con empleados y validaciones relacionadas con licencias y datos operativos.
+
+El equipo utilizó GitFlow para gestionar el desarrollo, trabajando mediante ramas feature y realizando merges progresivos hacia `develop` mediante Pull Requests revisados colaborativamente. Esta metodología permitió mantener estabilidad en el repositorio y asegurar la correcta integración entre los diferentes bounded contexts.
+
+Asimismo, la coordinación constante mediante reuniones virtuales y comunicación en Discord permitió resolver conflictos de integración, validar endpoints RESTful y asegurar coherencia entre frontend, backend y documentación técnica. Gracias al trabajo colaborativo, el equipo logró desplegar una versión funcional del backend de SafeBus con documentación Swagger y persistencia en MySQL completamente operativa.
+
+---
 
 #### 5.3.3. Evaluaciones según heurísticas
 
@@ -1120,7 +1135,6 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 
 **SITE o APP A EVALUAR:** SafeBus
 
----
 
 ## TAREAS A EVALUAR
 
@@ -1144,7 +1158,6 @@ No están incluidas en esta versión de la evaluación las siguientes tareas:
 3. Recuperación de contraseña.
 4. Módulos de soporte técnico.
 
----
 
 ## ESCALA DE SEVERIDAD
 
@@ -1157,7 +1170,6 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad.
 | 3 | Problema mayor: afecta el flujo de uso y requiere una corrección prioritaria. |
 | 4 | Problema crítico: impide completar una tarea principal y debe ser corregido antes del lanzamiento. |
 
----
 
 ## TABLA RESUMEN
 
@@ -1174,7 +1186,6 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad.
 | 9 | Los botones de resolución de alertas no muestran confirmación de acción | 2 | Usability: Visibilidad del estado del sistema |
 | 10 | El sistema no solicita confirmación antes de finalizar el servicio | 3 | Usability: Prevención de errores |
 
----
 
 ## DESCRIPCIÓN DE PROBLEMAS
 
@@ -1191,7 +1202,7 @@ El botón "Finalizar Servicio" tiene una gran presencia visual y se encuentra si
 
 Agregar una ventana de confirmación antes de ejecutar la acción, mostrando un mensaje como "¿Está seguro de finalizar el servicio?".
 
----
+
 
 ## OBSERVACIÓN #2: No existe una confirmación visual clara al enviar una alerta de emergencia
 
@@ -1206,7 +1217,6 @@ Cuando el conductor utiliza el botón de pánico, el sistema no muestra una retr
 
 Incorporar mensajes de confirmación y un indicador visual del estado de la alerta.
 
----
 
 ## OBSERVACIÓN #3: Existen elementos mezclados entre inglés y español
 
@@ -1221,7 +1231,7 @@ Algunos módulos utilizan nombres como "API Console", "Alert Logs" y "System Liv
 
 Unificar la interfaz utilizando un solo idioma para mantener consistencia y mejorar la comprensión.
 
----
+
 
 ## OBSERVACIÓN #4: El dashboard administrativo presenta demasiada información en una sola pantalla
 
@@ -1236,7 +1246,7 @@ La pantalla principal contiene numerosos elementos visuales, indicadores y panel
 
 Agrupar la información por secciones y establecer una jerarquía visual más clara.
 
----
+
 
 ## OBSERVACIÓN #5: No existe una opción visible para deshacer acciones importantes
 
@@ -1251,7 +1261,6 @@ Algunas acciones importantes no cuentan con mecanismos visibles para cancelarlas
 
 Implementar mensajes de confirmación y opciones para cancelar operaciones antes de ejecutarlas definitivamente.
 
----
 
 ## OBSERVACIÓN #6: Las alertas recientes poseen poca diferenciación visual respecto a otros elementos
 
@@ -1266,7 +1275,7 @@ Aunque las alertas muestran distintos niveles de prioridad, la información pued
 
 Utilizar colores, iconos y tamaños diferenciados para destacar eventos críticos.
 
----
+
 
 ## OBSERVACIÓN #7: El mapa operacional ocupa gran espacio y dificulta identificar información secundaria
 
@@ -1281,7 +1290,7 @@ El mapa central ocupa gran parte del panel administrativo, reduciendo el espacio
 
 Permitir contraer o redimensionar el mapa para priorizar otros indicadores.
 
----
+
 
 ## OBSERVACIÓN #8: No existe una sección de ayuda o guía para usuarios nuevos
 
@@ -1296,7 +1305,7 @@ El sistema no dispone de tutoriales, preguntas frecuentes o documentación integ
 
 Incorporar una sección de ayuda y soporte contextual en las principales pantallas.
 
----
+
 
 ## OBSERVACIÓN #9: Los botones de resolución de alertas no muestran confirmación de acción
 
@@ -1311,7 +1320,6 @@ Al resolver una incidencia, el sistema no informa claramente si la acción fue e
 
 Agregar mensajes de éxito y actualizar automáticamente el estado de las alertas.
 
----
 
 ## OBSERVACIÓN #10: El sistema no solicita confirmación antes de finalizar el servicio
 
@@ -1326,7 +1334,6 @@ La finalización del servicio puede ejecutarse directamente sin una advertencia 
 
 Implementar un cuadro de diálogo de confirmación que solicite al usuario verificar la acción antes de finalizar el turno.
 
----
 
 En general, la evaluación heurística evidencia que SafeBus presenta una interfaz consistente y funcional para las tareas de monitoreo y gestión del transporte público. Sin embargo, se identificaron oportunidades de mejora relacionadas con la prevención de errores, la retroalimentación del sistema y la incorporación de mecanismos de ayuda para nuevos usuarios. Estas mejoras contribuirán a fortalecer la experiencia de usuario y aumentar la eficiencia operativa de la plataforma.
 
