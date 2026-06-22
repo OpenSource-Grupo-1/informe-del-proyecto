@@ -1090,7 +1090,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **Edad:** 25 años
 
 <div align="center">
-      <img src= "Resources/img/resources/Entrevista Caro Segmento 2.png" alt="Entrevista Caro Segmento 2">
+      <img src= "Resources/img/Entrevista Caro Segmento 2.png" alt="Entrevista Vanesssa Segmento 2" >
 </div>
 
 - **Inicio:** 0:00
