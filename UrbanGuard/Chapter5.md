@@ -1036,7 +1036,8 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **Edad:** 22 años
 
 <div align="center">
-      <img src="assets/images/resources/Entrevista Cristhyan Segmento 1.png" alt="Entrevista Paco Segmento 1" width="80%" height="auto">
+      <img src= "Resources/img/Entrevista Paco Segmento 1.png" alt="Entrevista Paco Segmento 1" width="80%" height="auto">
+
 </div>
 
 - **Inicio:** 0:00
