@@ -939,28 +939,27 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 
 **User Flows a validar**
 
-**User Flow 1 – Inicio y gestión de turno**
+**1. Inicio y gestión de turno**
 - Iniciar sesión como conductor.
 - Visualizar turno asignado.
 - Revisar ruta, unidad y horario.
 - Iniciar y finalizar servicio.
 
-**User Flow 2 – Reporte de incidencias y alertas**
+**2. Reporte de incidencias y alertas**
 - Registrar una emergencia o problema durante el recorrido.
 - Enviar alerta al centro de control.
 - Visualizar confirmación de atención.
 
-**User Flow 3 – Seguimiento del recorrido**
+**3. Seguimiento del recorrido**
 - Revisar información de la ruta.
 - Consultar estado del viaje.
 - Ver información del servicio en tiempo real.
 
-**User Flow 4 – Registro de pasajeros**
+**4. Registro de pasajeros**
 - Revisar cantidad de pasajeros.
 - Actualizar información del servicio.
 
 **Tareas asignadas**
-
 1. Ingresar al aplicativo con sus credenciales.
 2. Revisar el turno asignado.
 3. Identificar ruta y unidad asignada.
@@ -970,19 +969,12 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 7. Finalizar el turno y revisar el resumen del servicio.
 
 **Preguntas de validación**
-
-1. ¿La información mostrada al iniciar sesión (turno, ruta y unidad) le permite entender rápidamente el servicio que debe realizar?
-
-2. ¿El proceso de iniciar y finalizar un turno le parece sencillo y adecuado para su trabajo diario?
-
-3. ¿Al registrar una emergencia o enviar una alerta considera que podría hacerlo fácilmente durante una situación real?
-
-4. ¿La información del recorrido y estado del servicio en tiempo real le ayudaría a realizar mejor su trabajo?
-
-5. ¿Qué parte de la aplicación considera más útil y qué aspecto cambiaría o mejoraría?
-
+1. ¿La información mostrada al iniciar sesión permite entender rápidamente el servicio?
+2. ¿El proceso de iniciar y finalizar un turno es sencillo para su trabajo diario?
+3. ¿Registrar una emergencia o enviar una alerta sería fácil durante una situación real?
+4. ¿La información del recorrido en tiempo real ayudaría a mejorar su trabajo?
+5. ¿Qué parte de la aplicación considera más útil y qué debería mejorar?
 6. Del 1 al 5, ¿qué tan probable sería utilizar esta aplicación durante sus jornadas? ¿Por qué?
-
 
 Segmento objetivo 2: Empresas / Consorcios de transporte público
 
@@ -991,7 +983,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 
 **User Flows a validar**
 
-**User Flow 1 – Gestión administrativa (ADMIN)**
+**1. Gestión administrativa (ADMIN)**
 - Ingresar al panel administrativo.
 - Revisar centro de control.
 - Gestionar conductores.
@@ -999,25 +991,24 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - Consultar historial de turnos.
 - Visualizar estado de servicios.
 
-**User Flow 2 – Monitoreo y control operativo**
+**2. Monitoreo y control operativo**
 - Revisar vehículos activos.
 - Consultar rutas en operación.
 - Visualizar información en tiempo real.
 - Identificar incidencias.
 
-**User Flow 3 – Gestión de alertas**
+**3. Gestión de alertas**
 - Recibir alerta enviada por conductor.
 - Revisar información del incidente.
 - Dar seguimiento al evento.
 
-**User Flow 4 – Reportes operativos**
+**4. Reportes operativos**
 - Revisar resumen del servicio.
 - Consultar kilómetros recorridos.
 - Revisar pasajeros registrados.
 - Analizar rendimiento operativo.
 
 **Tareas asignadas**
-
 1. Explorar el Landing Page e identificar qué problema resuelve SafeBus.
 2. Ingresar al dashboard administrativo.
 3. Revisar conductores registrados.
@@ -1028,18 +1019,13 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 8. Consultar resumen operativo del día.
 
 **Preguntas de validación**
-
 1. ¿El dashboard permite encontrar fácilmente la información necesaria para controlar conductores, unidades y servicios?
-
 2. ¿La gestión de turnos e historial de operaciones ayudaría a mejorar el control de la empresa?
-
-3. ¿La información mostrada en una alerta es suficiente para tomar decisiones ante una incidencia?
-
-4. ¿La visualización del estado de vehículos y servicios en tiempo real facilitaría la supervisión de la flota?
-
-5. ¿Qué funcionalidad del sistema considera más importante y qué aspecto debería mejorarse?
-
+3. ¿La información de una alerta es suficiente para tomar decisiones ante una incidencia?
+4. ¿La visualización del estado de vehículos y servicios en tiempo real facilita la supervisión?
+5. ¿Qué funcionalidad considera más importante y qué aspecto debería mejorarse?
 6. Del 1 al 5, ¿qué tan probable sería implementar SafeBus en su empresa? ¿Por qué?
+7. 
 #### 5.3.2. Registro de Entrevistas
 
 > *[Pendiente de completar]*
