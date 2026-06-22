@@ -1334,6 +1334,6 @@ En general, la evaluación heurística evidencia que SafeBus presenta una interf
 
 ### 5.4. Video About-the-Product
 
-> *[Pendiente de completar]*
+> https://youtu.be/vaL66r8K1ck 
 
 ---
