@@ -1053,7 +1053,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **Edad:** 26 años
 
 <div align="center">
-      <img src="assets/images/resources/Entrevista Vanessa Segmento 1.png" width="80%" height="auto">
+      <img src= "Resources/img/Entrevista Vanessa Segmento 1.png" alt="Entrevista Vanessa Segmento 1">
 </div>
 
 - **Inicio:** 0:00
@@ -1075,7 +1075,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **Edad:** 25 años
 
 <div align="center">
-      <img src="assets/images/resources/Entrevista Franco Segmento 2.png" width="80%" height="auto">
+      <img src= "Resources/img/Entrevista Franco Segmento 2.png" alt="Entrevista Franco Segmento 2">
 </div>
 
 - **Inicio:** 0:00
@@ -1090,7 +1090,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **Edad:** 25 años
 
 <div align="center">
-      <img src="assets/images/resources/Entrevista Caro Segmento 2.png" width="80%" height="auto">
+      <img src= "Resources/img/resources/Entrevista Caro Segmento 2.png" alt="Entrevista Caro Segmento 2">
 </div>
 
 - **Inicio:** 0:00
