@@ -880,6 +880,11 @@ Se realizaron pruebas directamente en el entorno de producción de Railway, conf
 
 ##### 5.2.3.8. Team Collaboration Insights during Sprint
 
+Durante el Sprint 3, el equipo trabajó de manera colaborativa en la implementación del backend RESTful de SafeBus utilizando Spring Boot bajo la arquitectura DDD + CQRS. La organización del trabajo se realizó mediante bounded contexts y ramas específicas en GitHub, permitiendo que cada integrante desarrollara funcionalidades independientes sin afectar la integración general del sistema.
+
+El equipo utilizó GitFlow para gestionar el desarrollo, trabajando mediante ramas feature y realizando merges progresivos hacia `develop` mediante Pull Requests revisados colaborativamente. Esta metodología permitió mantener estabilidad en el repositorio y asegurar la correcta integración entre los diferentes bounded contexts.
+
+Asimismo, la coordinación constante mediante reuniones virtuales y comunicación en Discord permitió resolver conflictos de integración, validar endpoints RESTful y asegurar coherencia entre frontend, backend y documentación técnica. Gracias al trabajo colaborativo, el equipo logró desplegar una versión funcional del backend de SafeBus con documentación Swagger y persistencia en MySQL completamente operativa.
 
 
 # Arquitectura Implementada para SAFEBUS
@@ -1093,19 +1098,6 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **URL:** h[ttps://upcedupe-my.sharepoint.com/:v:/g/personal/u202323243_upc_edu_pe/IQDvG7qcbLA4SpbyXvgeLP6zAZK4JCsJsvKpmLwuEPqTFp4?e=TL1NWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://youtu.be/eNBxgPOn_I4) 
 - **Resumen:** Caro percibe que toda la aplicación es clara, directa y fácil de usar. Desde la landing page siente que la información está bien explicada y no encuentra ningún obstáculo para entender las funciones gratuitas ni para navegar. El formulario de registro le parece rápido y lógico, con los datos justos y necesarios. Al llegar al dashboard, entiende de inmediato cómo moverse entre secciones y considera que agregar una ruta es un proceso muy intuitivo, ya que todo está ordenado y bien identificado. También interpreta el módulo de administrador como una herramienta útil para organizar sus seguiminentos y anotar fechas, complicaciones y prioridades. En resumen, su impresión global es positiva: siente que la plataforma es sencilla, funcional y pensada para que cualquier usuario la pueda utilizar sin complicaciones.   
 
-##### 5.2.3.8. Team Collaboration Insights during Sprint
-
-Durante el Sprint 3, el equipo trabajó de manera colaborativa en la implementación del backend RESTful de SafeBus utilizando Spring Boot bajo la arquitectura DDD + CQRS. La organización del trabajo se realizó mediante bounded contexts y ramas específicas en GitHub, permitiendo que cada integrante desarrollara funcionalidades independientes sin afectar la integración general del sistema.
-
-* **Carlos Blancas** lideró la configuración inicial del proyecto backend, incluyendo la integración de Spring Boot, configuración de MySQL, CORS global, Swagger UI y la implementación del bounded context IAM relacionado con empleados y autenticación.
-* **Boris Alvarado** desarrolló el bounded context **AlertManagement**, implementando la gestión de alertas de emergencia, endpoints RESTful y actualización del estado de incidentes mediante comandos y queries.
-* **Leonardo Delgado** trabajó en el bounded context **Monitoring**, desarrollando la gestión de unidades de transporte, monitoreo GPS y actualización de ubicación de buses en tiempo real.
-* **Fernando Espíritu** implementó el bounded context **IoTMonitoring**, desarrollando la gestión de sensores del sistema, incluyendo sensores GPS, botones de pánico, cámaras y acelerómetros.
-* **Ivonne Ibañez** desarrolló el bounded context **UserManagement**, implementando la gestión de conductores, asociación con empleados y validaciones relacionadas con licencias y datos operativos.
-
-El equipo utilizó GitFlow para gestionar el desarrollo, trabajando mediante ramas feature y realizando merges progresivos hacia `develop` mediante Pull Requests revisados colaborativamente. Esta metodología permitió mantener estabilidad en el repositorio y asegurar la correcta integración entre los diferentes bounded contexts.
-
-Asimismo, la coordinación constante mediante reuniones virtuales y comunicación en Discord permitió resolver conflictos de integración, validar endpoints RESTful y asegurar coherencia entre frontend, backend y documentación técnica. Gracias al trabajo colaborativo, el equipo logró desplegar una versión funcional del backend de SafeBus con documentación Swagger y persistencia en MySQL completamente operativa.
 
 ---
 
