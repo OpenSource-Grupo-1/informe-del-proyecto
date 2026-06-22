@@ -1029,11 +1029,310 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 
 #### 5.3.2. Registro de Entrevistas
 
-> *[Pendiente de completar]*
+**User Persona del Segmento Objetivo 1: Personas con plantas en casa**
+
+- **Nombres y apellidos:** **PABLO CHACOT** 
+- **Género:** Masculino
+- **Edad:** 22 años
+
+<div align="center">
+      <img src="assets/images/resources/Entrevista Cristhyan Segmento 1.png" alt="Entrevista Paco Segmento 1" width="80%" height="auto">
+</div>
+
+- **Inicio:** 0:00
+- **Duración:** 6:59 min
+- **URL:** [[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311082_upc_edu_pe/IQDu-vGArPjvQZbIJN1-flTDAfRFYF3reEetcAV8P1jpORY?](https://youtu.be/-4608rQgS-Y) e=wT3QkQ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://youtu.be/-4608rQgS-Y)
+- **Resumen:** Paco percibe la aplicación como una herramienta clara y fácil de usar, mostrando comodidad y familiaridad con cada paso que se le presenta. Repite varias veces que el sistema es “sencillo” e “intuitivo”, lo que refleja que no encuentra fricciones ni confusiones en el flujo. También valora especialmente la utilidad práctica de los sensores y las alertas, porque entiende que aportan información clave para la seguridad durante la actividad del transporte público. En general, su actitud es positiva, receptiva y sin objeciones técnicas importantes, transmitiendo que la app le parece funcional, bien organizada y adecuada para usuarios que quieren gestionar su seguridad.
+
+
+---
+
+- **Nombres y apellidos:** **VANESSA NUÑEZ** 
+- **Género:** FEMENINO
+- **Edad:** 26 años
+
+<div align="center">
+      <img src="assets/images/resources/Entrevista Vanessa Segmento 1.png" width="80%" height="auto">
+</div>
+
+- **Inicio:** 0:00
+- **Duración:** 4:05 min
+- **URL:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c197_upc_edu_pe/IQBAPbPzZ9LaRLTMuplI1HgtAb3jY5Yyp_9oBWWvl_uLqoI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Nlzd3P](https://youtu.be/9hNV2Dpi0Bg)
+- **Resumen:** Andre entiende la aplicación sin dificultad y siente que todo está ordenado y fácil de navegar. A lo largo de la demostración comenta que los procesos ingresar, ver el dashboard, registrar rutas, crear sensores y dispositivos le resultan claros y nada confusos. Le parece especialmente útil que la app permita vincular sensores y mostrar alertas, porque lo ve como algo realmente práctico para cuidar mejor las rutas. En general, transmite una impresión positiva: considera que la herramienta funciona bien, es intuitiva y podría ser utilizada sin problemas por cualquier transportista. 
+
+**User Persona del Segmento Objetivo 2: Viveros comerciales**
+
+- **Nombres y apellidos:** **NICOLE GUILLEN** 
+- **Género:** Femenino
+- **Edad:** 25 años
+
+
+**User Persona del Segmento Objetivo 2: Representantes de Consorcios**
+
+- **Nombres y apellidos:** **FRANCO ALCOCER** 
+- **Género:** Masculino
+- **Edad:** 25 años
+
+<div align="center">
+      <img src="assets/images/resources/Entrevista Franco Segmento 2.png" width="80%" height="auto">
+</div>
+
+- **Inicio:** 0:00
+- **Duración:** 10:44 min
+- **URL:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a352_upc_edu_pe/IQA3t8o3QYH8Q5MS_7G5JtQbAZmaOU4UJSALY0YLktrarOo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=MEaIVx](https://youtu.be/hXUC10LIUPg) 
+- **Resumen:** Franco transmite que la aplicación le resulta clara, ordenada y muy fácil de usar desde el inicio. Percibe que todo el flujo, desde la landing page hasta alertas es intuitivo, sin pasos confusos. La información está bien presentada, es relevante y le permite entender rápidamente cómo funciona cada sección. También valora que los formularios sean breves y que la navegación sea directa. En general, su impresión es positiva, siente que la app está bien estructurada, que cada parte cumple su propósito y que todas las funciones aportan valor a la experiencia del usuario. 
+
+
+---
+- **Nombres y apellidos:** **CARO CASTILO** 
+- **Género:** Femenino
+- **Edad:** 25 años
+
+<div align="center">
+      <img src="assets/images/resources/Entrevista Caro Segmento 2.png" width="80%" height="auto">
+</div>
+
+- **Inicio:** 0:00
+- **Duración:** 6:25 min
+- **URL:** h[ttps://upcedupe-my.sharepoint.com/:v:/g/personal/u202323243_upc_edu_pe/IQDvG7qcbLA4SpbyXvgeLP6zAZK4JCsJsvKpmLwuEPqTFp4?e=TL1NWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://youtu.be/eNBxgPOn_I4) 
+- **Resumen:** Caro percibe que toda la aplicación es clara, directa y fácil de usar. Desde la landing page siente que la información está bien explicada y no encuentra ningún obstáculo para entender las funciones gratuitas ni para navegar. El formulario de registro le parece rápido y lógico, con los datos justos y necesarios. Al llegar al dashboard, entiende de inmediato cómo moverse entre secciones y considera que agregar una ruta es un proceso muy intuitivo, ya que todo está ordenado y bien identificado. También interpreta el módulo de administrador como una herramienta útil para organizar sus seguiminentos y anotar fechas, complicaciones y prioridades. En resumen, su impresión global es positiva: siente que la plataforma es sencilla, funcional y pensada para que cualquier usuario la pueda utilizar sin complicaciones.   
+
 
 #### 5.3.3. Evaluaciones según heurísticas
 
-> *[Pendiente de completar]*
+**Esta evaluación fue realizada sobre la aplicación SafeBus.**
+
+## Evaluación Heurística de Usabilidad y Diseño Inclusivo para la Aplicación "SafeBus"
+
+**UX Heuristics & Principles Evaluation**
+
+**Usability – Inclusive Design – Information Architecture**
+
+**CARRERA:** Ingeniería de Software
+
+**CURSO:** Desarrollo de Aplicaciones Open Source
+
+**SECCIÓN:** 7380
+
+**PROFESORES:** Todos
+**CLIENTES(S):**
+       **Delgado Arriola, Leonardo Sebastián.**
+       **Alvarado Millán, Boris**
+       **Ibáñez Torres, Ivonne Beatriz**
+       **Blancas Chávez, Carlos Franco**
+       **Espíritu Silvestre, Fernando Carlos**
+
+**SITE o APP A EVALUAR:** SafeBus
+
+---
+
+## TAREAS A EVALUAR
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Inicio y finalización del servicio por parte del conductor.
+2. Consulta de la ruta y monitoreo del recorrido.
+3. Visualización del conteo de pasajeros en tiempo real.
+4. Envío de alertas mediante el botón de pánico.
+5. Gestión de conductores desde el panel administrativo.
+6. Monitoreo de unidades activas.
+7. Consulta del estado de las alertas.
+8. Visualización del mapa operacional en tiempo real.
+9. Revisión del historial de turnos.
+10. Navegación entre módulos del sistema.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Configuración avanzada del sistema.
+2. Integración con dispositivos IoT externos.
+3. Recuperación de contraseña.
+4. Módulos de soporte técnico.
+
+---
+
+## ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad.
+
+| Nivel | Descripción |
+| :---: | :--- |
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con poca frecuencia. No requiere corrección inmediata. |
+| 2 | Problema menor: puede afectar la experiencia del usuario y debería corregirse en futuras versiones. |
+| 3 | Problema mayor: afecta el flujo de uso y requiere una corrección prioritaria. |
+| 4 | Problema crítico: impide completar una tarea principal y debe ser corregido antes del lanzamiento. |
+
+---
+
+## TABLA RESUMEN
+
+| # | Problema | Escala de severidad | Heurística/Principio violado |
+| :-: | --- | :---: | --- |
+| 1 | El botón "Finalizar Servicio" puede activarse accidentalmente | 3 | Usability: Prevención de errores |
+| 2 | No existe una confirmación visual clara al enviar una alerta de emergencia | 2 | Usability: Visibilidad del estado del sistema |
+| 3 | Existen elementos mezclados entre inglés y español | 1 | Usability: Consistencia y estándares |
+| 4 | El dashboard administrativo presenta demasiada información en una sola pantalla | 2 | Usability: Diseño estético y minimalista |
+| 5 | No existe una opción visible para deshacer acciones importantes | 2 | Usability: Libertad y control del usuario |
+| 6 | Las alertas recientes poseen poca diferenciación visual respecto a otros elementos | 2 | Usability: Reconocimiento antes que memorización |
+| 7 | El mapa operacional ocupa gran espacio y dificulta identificar información secundaria | 1 | Usability: Diseño estético y minimalista |
+| 8 | No existe una sección de ayuda o guía para usuarios nuevos | 1 | Usability: Ayuda y documentación |
+| 9 | Los botones de resolución de alertas no muestran confirmación de acción | 2 | Usability: Visibilidad del estado del sistema |
+| 10 | El sistema no solicita confirmación antes de finalizar el servicio | 3 | Usability: Prevención de errores |
+
+---
+
+## DESCRIPCIÓN DE PROBLEMAS
+
+## OBSERVACIÓN #1: El botón "Finalizar Servicio" puede activarse accidentalmente
+
+- **Severidad:** 3
+- **Heurística violada:** Usabilidad – Prevención de errores.
+
+### Problema
+
+El botón "Finalizar Servicio" tiene una gran presencia visual y se encuentra siempre visible. Una pulsación accidental podría provocar la finalización involuntaria del servicio.
+
+### Recomendación
+
+Agregar una ventana de confirmación antes de ejecutar la acción, mostrando un mensaje como "¿Está seguro de finalizar el servicio?".
+
+---
+
+## OBSERVACIÓN #2: No existe una confirmación visual clara al enviar una alerta de emergencia
+
+- **Severidad:** 2
+- **Heurística violada:** Usabilidad – Visibilidad del estado del sistema.
+
+### Problema
+
+Cuando el conductor utiliza el botón de pánico, el sistema no muestra una retroalimentación clara que indique si la alerta fue enviada y recibida correctamente por el centro de control.
+
+### Recomendación
+
+Incorporar mensajes de confirmación y un indicador visual del estado de la alerta.
+
+---
+
+## OBSERVACIÓN #3: Existen elementos mezclados entre inglés y español
+
+- **Severidad:** 1
+- **Heurística violada:** Usabilidad – Consistencia y estándares.
+
+### Problema
+
+Algunos módulos utilizan nombres como "API Console", "Alert Logs" y "System Live", mientras que otros se encuentran completamente en español.
+
+### Recomendación
+
+Unificar la interfaz utilizando un solo idioma para mantener consistencia y mejorar la comprensión.
+
+---
+
+## OBSERVACIÓN #4: El dashboard administrativo presenta demasiada información en una sola pantalla
+
+- **Severidad:** 2
+- **Heurística violada:** Usabilidad – Diseño estético y minimalista.
+
+### Problema
+
+La pantalla principal contiene numerosos elementos visuales, indicadores y paneles, dificultando que el usuario identifique rápidamente la información crítica.
+
+### Recomendación
+
+Agrupar la información por secciones y establecer una jerarquía visual más clara.
+
+---
+
+## OBSERVACIÓN #5: No existe una opción visible para deshacer acciones importantes
+
+- **Severidad:** 2
+- **Heurística violada:** Usabilidad – Libertad y control del usuario.
+
+### Problema
+
+Algunas acciones importantes no cuentan con mecanismos visibles para cancelarlas o revertirlas.
+
+### Recomendación
+
+Implementar mensajes de confirmación y opciones para cancelar operaciones antes de ejecutarlas definitivamente.
+
+---
+
+## OBSERVACIÓN #6: Las alertas recientes poseen poca diferenciación visual respecto a otros elementos
+
+- **Severidad:** 2
+- **Heurística violada:** Usabilidad – Reconocimiento antes que memorización.
+
+### Problema
+
+Aunque las alertas muestran distintos niveles de prioridad, la información puede pasar desapercibida debido a la cantidad de elementos presentes en pantalla.
+
+### Recomendación
+
+Utilizar colores, iconos y tamaños diferenciados para destacar eventos críticos.
+
+---
+
+## OBSERVACIÓN #7: El mapa operacional ocupa gran espacio y dificulta identificar información secundaria
+
+- **Severidad:** 1
+- **Heurística violada:** Usabilidad – Diseño estético y minimalista.
+
+### Problema
+
+El mapa central ocupa gran parte del panel administrativo, reduciendo el espacio disponible para información complementaria.
+
+### Recomendación
+
+Permitir contraer o redimensionar el mapa para priorizar otros indicadores.
+
+---
+
+## OBSERVACIÓN #8: No existe una sección de ayuda o guía para usuarios nuevos
+
+- **Severidad:** 1
+- **Heurística violada:** Usabilidad – Ayuda y documentación.
+
+### Problema
+
+El sistema no dispone de tutoriales, preguntas frecuentes o documentación integrada para nuevos usuarios.
+
+### Recomendación
+
+Incorporar una sección de ayuda y soporte contextual en las principales pantallas.
+
+---
+
+## OBSERVACIÓN #9: Los botones de resolución de alertas no muestran confirmación de acción
+
+- **Severidad:** 2
+- **Heurística violada:** Usabilidad – Visibilidad del estado del sistema.
+
+### Problema
+
+Al resolver una incidencia, el sistema no informa claramente si la acción fue ejecutada correctamente.
+
+### Recomendación
+
+Agregar mensajes de éxito y actualizar automáticamente el estado de las alertas.
+
+---
+
+## OBSERVACIÓN #10: El sistema no solicita confirmación antes de finalizar el servicio
+
+- **Severidad:** 3
+- **Heurística violada:** Usabilidad – Prevención de errores.
+
+### Problema
+
+La finalización del servicio puede ejecutarse directamente sin una advertencia previa, aumentando la posibilidad de errores operativos.
+
+### Recomendación
+
+Implementar un cuadro de diálogo de confirmación que solicite al usuario verificar la acción antes de finalizar el turno.
+
+---
+
+En general, la evaluación heurística evidencia que SafeBus presenta una interfaz consistente y funcional para las tareas de monitoreo y gestión del transporte público. Sin embargo, se identificaron oportunidades de mejora relacionadas con la prevención de errores, la retroalimentación del sistema y la incorporación de mecanismos de ayuda para nuevos usuarios. Estas mejoras contribuirán a fortalecer la experiencia de usuario y aumentar la eficiencia operativa de la plataforma.
 
 ---
 
