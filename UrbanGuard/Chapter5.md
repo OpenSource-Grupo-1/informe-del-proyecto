@@ -932,7 +932,103 @@ El **Sprint 2** consolidó al equipo como una unidad técnica cohesiva especiali
 
 #### 5.3.1. Diseño de Entrevistas
 
-> *[Pendiente de completar]*
+Segmento objetivo 1: Conductores (Operarios de transporte público)
+
+Elementos a validar:
+Aplicación móvil del conductor y experiencia operativa durante el servicio.
+
+User Flows a validar:
+
+User Flow 1 – Inicio y gestión de turno
+
+Iniciar sesión como conductor.
+Visualizar el turno asignado.
+Revisar ruta, unidad y horario.
+Iniciar y finalizar servicio.
+
+User Flow 2 – Reporte de incidencias y alertas
+
+Registrar una emergencia o problema durante el recorrido.
+Enviar alerta al centro de control.
+Visualizar confirmación de atención.
+
+User Flow 3 – Seguimiento del recorrido
+
+Revisar información de la ruta.
+Consultar estado del viaje.
+Ver información del servicio en tiempo real.
+
+User Flow 4 – Registro de pasajeros
+
+Revisar cantidad de pasajeros.
+Actualizar información del servicio.
+Tareas asignadas:
+Ingresar al aplicativo con sus credenciales.
+Revisar el turno asignado para el día.
+Identificar la ruta y unidad asignada.
+Iniciar un servicio de transporte.
+Simular una alerta de emergencia durante el recorrido.
+Revisar si la alerta fue enviada correctamente al centro de control.
+Finalizar el turno y revisar el resumen del servicio.
+Preguntas de validación:
+Al ingresar al aplicativo, ¿le resultó claro dónde revisar su turno y la información de la ruta asignada?
+¿La información mostrada antes de iniciar el servicio (ruta, unidad, horario) es suficiente para realizar su trabajo?
+Al iniciar y finalizar un turno, ¿el proceso le pareció rápido y sencillo?
+Si tuviera una emergencia durante el recorrido, ¿considera que podría enviar una alerta fácilmente desde la aplicación?
+¿La confirmación de una alerta enviada le generaría confianza de que el centro de control recibió el aviso?
+¿La información del recorrido en tiempo real le ayudaría a realizar mejor su trabajo?
+¿El registro de pasajeros y datos del servicio reemplazaría procesos manuales que realiza actualmente?
+Durante el uso de la aplicación, ¿encontró algún botón, pantalla o paso difícil de entender?
+En una escala del 1 al 5, ¿qué tan útil considera esta aplicación para sus actividades diarias? ¿Por qué?
+¿Qué función agregaría o cambiaría para que la aplicación sea más práctica para un conductor?
+Segmento objetivo 2: Empresas / Consorcios de transporte público
+
+Elementos a validar:
+Landing Page y Panel Administrativo Web (Dashboard SafeBus).
+
+User Flows a validar:
+User Flow 1 – Gestión administrativa (ADMIN)
+Ingresar al panel administrativo.
+Revisar el centro de control.
+Gestionar conductores.
+Revisar unidades asignadas.
+Consultar historial de turnos.
+Visualizar estado de servicios.
+User Flow 2 – Monitoreo y control de operaciones
+Revisar vehículos activos.
+Consultar rutas en operación.
+Visualizar información del servicio en tiempo real.
+Identificar incidencias.
+User Flow 3 – Gestión de alertas
+Recibir una alerta enviada por un conductor.
+Revisar información del incidente.
+Dar seguimiento al evento.
+User Flow 4 – Reportes operativos
+Revisar resumen del servicio.
+Consultar kilómetros recorridos.
+Revisar pasajeros registrados.
+Analizar rendimiento operativo.
+Tareas asignadas:
+Explorar el Landing Page e identificar qué problema resuelve SafeBus.
+Ingresar al panel administrativo.
+Revisar la lista de conductores registrados.
+Consultar una unidad asignada.
+Revisar el historial de turnos de un conductor.
+Identificar un servicio finalizado y sus datos.
+Revisar una alerta generada por un conductor.
+Consultar el resumen operativo del día.
+Preguntas de validación:
+Después de revisar el Landing Page, ¿quedó claro qué problema del transporte público resuelve SafeBus?
+Al ingresar al dashboard administrativo, ¿fue sencillo identificar las funciones principales del sistema?
+¿La información de conductores, unidades y turnos está organizada de una manera útil para la gestión diaria?
+Al revisar el historial de turnos, ¿considera que permite controlar mejor las operaciones realizadas?
+¿La visualización del estado de los servicios ayudaría a detectar problemas rápidamente?
+Cuando un conductor genera una alerta, ¿la información mostrada es suficiente para tomar una decisión?
+¿El centro de control permitiría mejorar la supervisión de la flota?
+¿Los reportes de kilómetros, pasajeros y servicios ayudarían a evaluar el rendimiento del transporte?
+Durante el uso del dashboard, ¿hubo alguna sección o función que resultara confusa?
+En una escala del 1 al 5, ¿qué tan probable sería implementar SafeBus en su empresa? ¿Por qué?
+¿Qué funcionalidad agregaría, quitaría o mejoraría para adaptarlo mejor a su operación?
 
 #### 5.3.2. Registro de Entrevistas
 
