@@ -1053,7 +1053,7 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **Edad:** 26 años
 
 <div align="center">
-      <img src= "Resources/img/Entrevista Vanessa Segmento 1.png" alt="Entrevista Vanessa Segmento 1">
+      <img src= "Resources/img/Entrevista Vanesssa Segmento 1.png" alt="Entrevista Vanesssa Segmento 1" >
 </div>
 
 - **Inicio:** 0:00
