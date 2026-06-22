@@ -1061,11 +1061,6 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - **URL:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c197_upc_edu_pe/IQBAPbPzZ9LaRLTMuplI1HgtAb3jY5Yyp_9oBWWvl_uLqoI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Nlzd3P](https://youtu.be/9hNV2Dpi0Bg)
 - **Resumen:** Andre entiende la aplicación sin dificultad y siente que todo está ordenado y fácil de navegar. A lo largo de la demostración comenta que los procesos ingresar, ver el dashboard, registrar rutas, crear sensores y dispositivos le resultan claros y nada confusos. Le parece especialmente útil que la app permita vincular sensores y mostrar alertas, porque lo ve como algo realmente práctico para cuidar mejor las rutas. En general, transmite una impresión positiva: considera que la herramienta funciona bien, es intuitiva y podría ser utilizada sin problemas por cualquier transportista. 
 
-**User Persona del Segmento Objetivo 2: Viveros comerciales**
-
-- **Nombres y apellidos:** **NICOLE GUILLEN** 
-- **Género:** Femenino
-- **Edad:** 25 años
 
 
 **User Persona del Segmento Objetivo 2: Representantes de Consorcios**
