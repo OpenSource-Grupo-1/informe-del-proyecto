@@ -932,12 +932,12 @@ El **Sprint 2** consolidó al equipo como una unidad técnica cohesiva especiali
 
 #### 5.3.1. Diseño de Entrevistas
 
-## Segmento objetivo 1: Conductores (Operarios de transporte público)
+Segmento objetivo 1: Conductores (Operarios de transporte público)
 
 **Elementos a validar:**  
 Aplicación móvil del conductor y experiencia operativa durante el servicio.
 
-### User Flows a validar
+**User Flows a validar**
 
 **User Flow 1 – Inicio y gestión de turno**
 - Iniciar sesión como conductor.
@@ -959,7 +959,8 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 - Revisar cantidad de pasajeros.
 - Actualizar información del servicio.
 
-### Tareas asignadas
+**Tareas asignadas**
+
 1. Ingresar al aplicativo con sus credenciales.
 2. Revisar el turno asignado.
 3. Identificar ruta y unidad asignada.
@@ -968,7 +969,8 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 6. Verificar que la alerta llegue al centro de control.
 7. Finalizar el turno y revisar el resumen del servicio.
 
-### Preguntas de validación
+**Preguntas de validación**
+
 1. ¿Fue claro dónde revisar su turno y ruta asignada?
 2. ¿La información previa al servicio es suficiente para realizar su trabajo?
 3. ¿El inicio y cierre del turno fue rápido y sencillo?
@@ -981,12 +983,15 @@ Aplicación móvil del conductor y experiencia operativa durante el servicio.
 10. ¿Qué función agregaría o mejoraría?
 
 
-## Segmento objetivo 2: Empresas / Consorcios de transporte público
+------------------------------------------------
+
+
+Segmento objetivo 2: Empresas / Consorcios de transporte público
 
 **Elementos a validar:**  
 Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 
-### User Flows a validar
+**User Flows a validar**
 
 **User Flow 1 – Gestión administrativa (ADMIN)**
 - Ingresar al panel administrativo.
@@ -1013,7 +1018,8 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 - Revisar pasajeros registrados.
 - Analizar rendimiento operativo.
 
-### Tareas asignadas
+**Tareas asignadas**
+
 1. Explorar el Landing Page e identificar qué problema resuelve SafeBus.
 2. Ingresar al dashboard administrativo.
 3. Revisar conductores registrados.
@@ -1023,7 +1029,8 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 7. Revisar una alerta generada.
 8. Consultar resumen operativo del día.
 
-### Preguntas de validación
+**Preguntas de validación**
+
 1. ¿Quedó claro qué problema del transporte público resuelve SafeBus?
 2. ¿Fue sencillo identificar las funciones principales del dashboard?
 3. ¿La información de conductores, unidades y turnos está organizada?
@@ -1035,7 +1042,6 @@ Landing Page y Panel Administrativo Web (Dashboard SafeBus).
 9. ¿Encontró alguna sección confusa dentro del sistema?
 10. Del 1 al 5, ¿qué tan probable sería implementar SafeBus?
 11. ¿Qué funcionalidad agregaría o mejoraría?
-
 #### 5.3.2. Registro de Entrevistas
 
 > *[Pendiente de completar]*
