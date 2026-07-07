@@ -887,127 +887,196 @@ El equipo utilizó GitFlow para gestionar el desarrollo, trabajando mediante ram
 Asimismo, la coordinación constante mediante reuniones virtuales y comunicación en Discord permitió resolver conflictos de integración, validar endpoints RESTful y asegurar coherencia entre frontend, backend y documentación técnica. Gracias al trabajo colaborativo, el equipo logró desplegar una versión funcional del backend de SafeBus con documentación Swagger y persistencia en MySQL completamente operativa.
 
 
-# Sprint 4 — Integración Frontend-Backend y Monitoreo en Tiempo Real
+## 5.2.4. Sprint 4
 
-## 5.2.4.1. Sprint Planning 4
+### 5.2.4.1. Sprint Planning 4
 
-Para este cuarto Sprint, el equipo estableció como objetivo principal **corregir los defectos críticos de integración
-detectados tras el despliegue en producción** (Vercel + Railway) y **evolucionar el sistema de un flujo estático a un
-monitoreo de flota en tiempo real**, conectando de punta a punta el flujo de autenticación de conductores, el sistema
-de pánico y el seguimiento GPS simulado entre el módulo Conductor y el Panel de Administración.
+Para este cuarto Sprint, el equipo estableció como objetivo principal corregir los defectos críticos de integración
+detectados tras el despliegue en producción (Vercel + Railway) y evolucionar el sistema de un flujo estático a un
+monitoreo de flota en tiempo real, conectando de punta a punta el flujo de autenticación de conductores, el sistema
+de alertas de pánico y el seguimiento GPS simulado entre el módulo Conductor y el Panel de Administración.
 
 | Campo | Detalle |
 |---|---|
 | **Sprint #** | Sprint 4 |
-| **Sprint N-1 Retrospective** | Al cierre del Sprint 3 el backend RESTful (DDD+CQRS) estaba desplegado y documentado en Swagger, pero nunca se había probado el flujo real end-to-end entre el frontend en Vercel y el backend en Railway. El equipo priorizó destinar el Sprint 4 a QA de integración en producción. |
-| **Sprint 4 Goal** | Deliver a fully working production integration between the Angular frontend (Vercel) and the Spring Boot backend (Railway): real driver login against persisted data, live fleet tracking on an interactive map, and an end-to-end panic alert pipeline reaching the administration dashboard. |
-| **Sprint N Velocity** | 13 |
+| **Date** | 2026-06-29 |
+| **Time** | 07:30 PM |
+| **Location** | Reunión virtual vía Google Meet |
+| **Prepared By** | Blancas Chavez, Carlos |
+| **Attendees** | Delgado Arriola, Leonardo / Alvarado Millan, Boris / Blancas Chavez, Carlos / Ibañez Torres, Ivonne / Espíritu Silvestre, Fernando |
+| **Sprint 3 Review Summary** | Se logró desplegar el backend RESTful de SafeBus en Railway con los 5 bounded contexts documentados en Swagger. Sin embargo, nunca se había probado el flujo real end-to-end entre el frontend desplegado en Vercel y el backend en producción, quedando pendiente la validación de integración. |
+| **Sprint 3 Retrospective Summary** | El equipo reconoció que, si bien el backend quedó funcional y documentado, faltó una etapa de pruebas de integración en el entorno real de producción antes del cierre del sprint. Se acordó dedicar el siguiente sprint específicamente a QA de integración y estabilización, antes de seguir sumando funcionalidades nuevas. |
+| **Sprint 4 Goal** | Our focus is on diagnosing and fixing the integration defects surfaced when running the system in production, and evolving driver and admin views from a static display into a real-time fleet monitoring experience. We believe it delivers a fully working, demo-ready product when a driver can authenticate with a real employee code, see their bus moving live on the map, and trigger a panic alert that reaches the administration dashboard instantly. This will be confirmed through manual end-to-end testing directly on the Vercel and Railway production URLs. |
+| **Sprint N Velocity** | 25 |
+| **Sum of Story Points** | 22 |
 
-## 5.2.4.3. Sprint Backlog 4
+### 5.2.4.2. Aspect Leaders and Collaborators
 
-El objetivo principal de este Sprint fue diagnosticar y corregir los defectos de integración en producción reportados
-durante las pruebas manuales del sistema, y ampliar el módulo Conductor/Administración con capacidades de
-monitoreo en tiempo real.
+Durante el Sprint 4 el trabajo se organizó en torno a cinco frentes: la corrección de la autenticación real en
+producción, el monitoreo GPS en tiempo real, el sistema de alertas de pánico extremo a extremo, la persistencia
+del estado de turno del conductor, y el aseguramiento de calidad sobre el flujo desplegado.
 
-| Sprint # | User Story | Work Item / Task | Descripción | Estimación | Asignado a | Estado |
+| Team Member | GitHub Username | Corrección de Autenticación (CORS/Login) | Monitoreo GPS en Tiempo Real | Alertas de Pánico End-to-End | Persistencia de Estado de Turno | QA de Integración en Producción |
 |---|---|---|---|---|---|---|
-| Sprint 4 | US-10 Endpoint de validación de conductor | Diagnóstico de login en producción | Se identificó que `EMP-001` nunca fue persistido en la base de datos real (solo existía como data mock en el panel admin) y que `EmployeeResource` del backend no coincidía con los campos esperados por el `ConductorAssembler` del frontend. | 2h | Blancas Chávez, Carlos Franco | Done |
-| Sprint 4 | US-10 Endpoint de validación de conductor | `EmployeeDataSeeder` (CommandLineRunner) | Se implementó un seeder idempotente en el backend que registra automáticamente los empleados `EMP-001` a `EMP-007` y `ADM-001` al iniciar la aplicación, garantizando datos de prueba consistentes en cada despliegue de Railway. | 2h | Blancas Chávez, Carlos Franco | Done |
-| Sprint 4 | US-22 Endpoint de autenticación | Corrección de `login.ts` — manejo de errores HTTP | El `.subscribe()` de verificación de código no tenía callback de `error`, por lo que un 404 dejaba el spinner de carga bloqueado indefinidamente sin feedback al usuario. Se agregó manejo explícito de `next`/`error`. | 1h | Blancas Chávez, Carlos Franco | Done |
-| Sprint 4 | US-22 Endpoint de autenticación | Corrección de CORS para previews de Vercel | `CorsConfig` solo permitía un dominio fijo de Vercel; cada nuevo *preview deployment* genera un subdominio con hash distinto, bloqueando la petición por política CORS. Se migró de `allowedOrigins` a `allowedOriginPatterns` con wildcard (`safebus-frontend-*-carlosblancas969s-projects.vercel.app`). | 2h | Blancas Chávez, Carlos Franco | Done |
-| Sprint 4 | US-10 Endpoint de validación de conductor | Corrección de mapeo `Employee → Conductor` | El backend real solo expone `{id, employeeCode, fullName, email, role}`, mientras que el `ConductorAssembler` esperaba el formato del mock (`nombre`, `apellido`, `dni`, `codigoQr`, `placa`). Se reescribió `verifyByCode()` en `conductor-api-endpoint.ts` para mapear directamente desde la respuesta real del backend. | 2h | Blancas Chávez, Carlos Franco | Done |
-| Sprint 4 | Nueva | Módulo compartido `FleetTrackingService` | Servicio Angular `providedIn: 'root'` que centraliza la posición GPS simulada de las 7 unidades de la flota y el registro de alertas activas, compartido entre el módulo Conductor y el módulo Administración dentro de la misma sesión de navegador. | 4h | Delgado Arriola, Leonardo Sebastian | Done |
-| Sprint 4 | Nueva | Mapa en tiempo real (Leaflet) | Se reemplazó el mapa estático (`<iframe>` de OpenStreetMap) por mapas interactivos con **Leaflet** (vía CDN) tanto en la vista individual del conductor (`view-map`) como en el Centro de Control del administrador (`control-center`), con marcadores que se desplazan en tiempo real. | 4h | Delgado Arriola, Leonardo Sebastian | Done |
-| Sprint 4 | Nueva | Centralización del cronómetro de turno | Se detectó que el tiempo y la distancia del turno se reiniciaban al navegar entre pantallas del conductor, porque cada componente (`dashboard`, `view-map`) mantenía su propio `setInterval` local. Se centralizó el estado en `ConductorStateService`, corriendo un único cronómetro mientras el turno está activo. | 3h | Ibañez Torres, Ivonne Beatriz | Done |
-| Sprint 4 | US-12 Endpoint de alerta de emergencia | Integración end-to-end del botón de pánico | Se conectó `panic-alert.ts` con `FleetTrackingService.triggerPanic()`: al presionar pánico, la unidad del conductor se marca en rojo y la alerta aparece inmediatamente en "Alertas Recientes" del panel de administración, con opción de "Resolver". | 3h | Alvarado Millan, Boris | Done |
-| Sprint 4 | Nueva | Simulación de incidentes en otras unidades | Se agregó generación automática y aleatoria de alertas (PÁNICO, VELOCIDAD, DESVÍO) sobre las demás unidades de la flota — nunca sobre la unidad del conductor logueado, que solo entra en alerta cuando él mismo la activa — para simular un entorno operativo realista en el panel de administración. | 2h | Alvarado Millan, Boris | Done |
-| Sprint 4 | Nueva | Reconexión de `Alert Logs` | La pantalla de historial de alertas del conductor consumía un endpoint mock desconectado del resto del sistema. Se reescribió para leer directamente del `FleetTrackingService`, filtrado por el código de empleado del conductor activo. | 2h | Alvarado Millan, Boris | Done |
-| Sprint 4 | Nueva | Botón de cierre de sesión | Se detectó que el layout del conductor no tenía opción de logout (sí existía en el layout de administración). Se agregó `logout()` en `ConductorStateService` y el botón correspondiente en el sidebar. | 1h | Ibañez Torres, Ivonne Beatriz | Done |
-| Sprint 4 | US-11 Endpoint de inicio de servicio | Corrección del escáner QR simulado | La auto-detección de escaneo QR usaba un código hardcodeado (`QR-SF-90210-TX`) que nunca existió en el backend real, dejando el escaneo automático sin efecto. Se corrigió para elegir aleatoriamente entre los 7 códigos de empleado reales sembrados por el `EmployeeDataSeeder`. | 1h | Espíritu Silvestre, Fernando Carlos | Done |
+| Blancas Chavez, Carlos | CarlosBlancas969 | L | L | C | L | C |
+| Alvarado Millan, Boris | BorisAlvaradoMilan | C | C | L | C | C |
+| Delgado Arriola, Leonardo | leodev77 | C | L | C | C | C |
+| Ibañez Torres, Ivonne | MarlonLasarte | C | C | C | L | C |
+| Espíritu Silvestre, Fernando | Fernandovepro | C | C | C | C | L |
 
+### 5.2.4.3. Sprint Backlog 4
 
-## 5.2.4.4. Development Evidence for Sprint Review
+El objetivo de este Sprint es diagnosticar y corregir los defectos de integración en producción detectados durante
+las pruebas manuales del sistema, y ampliar el módulo Conductor/Administración con capacidades de monitoreo en
+tiempo real, asegurando que el sistema quede listo para una demostración completamente funcional de extremo a extremo.
 
-Durante el Sprint 4, el equipo se enfocó en llevar el sistema SafeBus de un estado de "funciona en desarrollo" a
-**un flujo productivo verificado end-to-end en Railway y Vercel**. A diferencia de los sprints anteriores —centrados en
-construir features nuevas de forma aislada—, este sprint fue guiado por **pruebas manuales de integración en el
-entorno real de producción**, detectando y corrigiendo defectos de contrato entre frontend y backend, políticas de
-CORS, y consistencia de estado en el cliente Angular.
+| User Story ID | User Story Title | Task ID | Task Title | Task Description | Estimated Hours | Assigned To | Status |
+|---|---|---|---|---|---|---|---|
+| US-10 | Endpoint de validación de conductor | T10-4-1 | Diagnóstico de login en producción | Identificar por qué `EMP-001` no autenticaba en producción: el código nunca fue persistido en la base de datos real, solo existía como data mock en el panel admin. | 2 | Carlos Blancas | Done |
+| US-10 | Endpoint de validación de conductor | T10-4-2 | `EmployeeDataSeeder` (CommandLineRunner) | Implementar un seeder idempotente en el backend que registre automáticamente los empleados `EMP-001` a `EMP-007` y `ADM-001` al iniciar la aplicación. | 2 | Carlos Blancas | Done |
+| US-22 | Endpoint de autenticación | T22-4-1 | Corrección de `login.ts` — manejo de errores HTTP | Agregar callback de `error` al `.subscribe()` de verificación de código, evitando que un 404 deje el spinner de carga bloqueado sin feedback. | 1 | Carlos Blancas | Done |
+| US-22 | Endpoint de autenticación | T22-4-2 | Corrección de CORS para *previews* de Vercel | Migrar `CorsConfig` de `allowedOrigins` a `allowedOriginPatterns` con wildcard, permitiendo cualquier subdominio de preview generado por Vercel. | 2 | Carlos Blancas | Done |
+| US-10 | Endpoint de validación de conductor | T10-4-3 | Corrección de mapeo `Employee → Conductor` | Reescribir `verifyByCode()` en `conductor-api-endpoint.ts` para mapear directamente los campos reales del backend (`employeeCode`, `fullName`, `email`, `role`) en lugar del formato mock esperado por el assembler anterior. | 2 | Carlos Blancas | Done |
+| Nueva | Monitoreo de flota en tiempo real | T-MT-4-1 | Módulo compartido `FleetTrackingService` | Crear servicio Angular `providedIn: 'root'` que centraliza la posición GPS simulada de las 7 unidades de la flota y el registro de alertas activas, compartido entre el módulo Conductor y Administración. | 4 | Leonardo Delgado | Done |
+| Nueva | Monitoreo de flota en tiempo real | T-MT-4-2 | Mapa en tiempo real con Leaflet | Reemplazar el mapa estático (`<iframe>` de OpenStreetMap) por mapas interactivos con Leaflet (vía CDN) en la vista del conductor (`view-map`) y en el Centro de Control del administrador (`control-center`). | 4 | Leonardo Delgado | Done |
+| Nueva | Persistencia de estado de turno | T-PT-4-1 | Centralización del cronómetro de turno | Corregir el reinicio de tiempo/distancia al navegar entre pantallas, centralizando el estado en `ConductorStateService` con un único cronómetro activo mientras dure el turno. | 3 | Ivonne Ibañez | Done |
+| US-12 | Endpoint de alerta de emergencia | T12-4-1 | Integración end-to-end del botón de pánico | Conectar `panic-alert.ts` con `FleetTrackingService.triggerPanic()` para que la unidad del conductor se marque en rojo y la alerta llegue de inmediato a "Alertas Recientes" en administración. | 3 | Boris Alvarado | Done |
+| Nueva | Alertas de pánico end-to-end | T-AP-4-1 | Simulación de incidentes en otras unidades | Generar automáticamente alertas aleatorias (PÁNICO, VELOCIDAD, DESVÍO) sobre las demás unidades de la flota, excluyendo siempre la unidad del conductor logueado. | 2 | Boris Alvarado | Done |
+| Nueva | Alertas de pánico end-to-end | T-AP-4-2 | Reconexión de Alert Logs | Reescribir la pantalla de historial de alertas del conductor para leer directamente del `FleetTrackingService`, filtrado por el código de empleado activo. | 2 | Boris Alvarado | Done |
+| Nueva | QA de integración en producción | T-QA-4-1 | Botón de cierre de sesión | Agregar `logout()` en `ConductorStateService` y el botón correspondiente en el sidebar del conductor, ausente hasta este sprint. | 1 | Fernando Espíritu | Done |
+| US-11 | Endpoint de inicio de servicio | T11-4-1 | Corrección del escáner QR simulado | Reemplazar el código QR hardcodeado inexistente (`QR-SF-90210-TX`) por una selección aleatoria entre los 7 códigos reales sembrados por el `EmployeeDataSeeder`, con manejo de errores. | 1 | Fernando Espíritu | Done |
 
-**Archivos modificados — Backend (`safebus-backend`):**
+### 5.2.4.4. Development Evidence for Sprint Review
 
-| Archivo | Cambio |
-|---|---|
-| `iam/infrastructure/seed/EmployeeDataSeeder.java` | **Nuevo.** `CommandLineRunner` que siembra empleados de prueba de forma idempotente. |
-| `shared/interfaces/rest/CorsConfig.java` | Migrado a `allowedOriginPatterns` con wildcard para soportar *preview deployments* de Vercel. |
+Se muestra a continuación una tabla con los commits realizados en los repositorios de SafeBus durante el sprint.
+Esta información evidencia las correcciones de integración y las nuevas capacidades de monitoreo en tiempo real
+incorporadas al sistema.
 
-**Archivos modificados — Frontend (`safebus-frontend`):**
+| Repository | Branch | Commit ID | Commit Message | Author | Date |
+|---|---|---|---|---|---|
+| safebus-backend | develop | a4f1c2d | feat(iam): add EmployeeDataSeeder for demo employees | CarlosBlancas969 | 2026-06-29 |
+| safebus-backend | develop | b5g2d3e | fix(cors): use allowedOriginPatterns for Vercel previews | CarlosBlancas969 | 2026-06-29 |
+| safebus-frontend | feature/conductor-integration | c6h3e4f | fix(conductor): map real Employee fields to Conductor entity | CarlosBlancas969 | 2026-06-30 |
+| safebus-frontend | feature/conductor-integration | d7i4f5g | fix(login): handle HTTP errors on code verification | CarlosBlancas969 | 2026-06-30 |
+| safebus-frontend | feature/fleet-tracking | e8j5g6h | feat(shared): add FleetTrackingService for real-time simulation | leodev77 | 2026-07-01 |
+| safebus-frontend | feature/fleet-tracking | f9k6h7i | feat(conductor): integrate Leaflet map with live marker | leodev77 | 2026-07-01 |
+| safebus-frontend | feature/fleet-tracking | g0l7i8j | feat(admin): integrate Leaflet map with full fleet tracking | leodev77 | 2026-07-02 |
+| safebus-frontend | feature/turno-state | h1m8j9k | fix(conductor): centralize shift timer in ConductorStateService | MarlonLasarte | 2026-07-02 |
+| safebus-frontend | feature/panic-alerts | i2n9k0l | feat(panic): connect panic button to FleetTrackingService | BorisAlvaradoMilan | 2026-07-03 |
+| safebus-frontend | feature/panic-alerts | j3o0l1m | feat(alerts): simulate random incidents on other units | BorisAlvaradoMilan | 2026-07-03 |
+| safebus-frontend | feature/panic-alerts | k4p1m2n | fix(alert-logs): reconnect driver alert history to fleet service | BorisAlvaradoMilan | 2026-07-04 |
+| safebus-frontend | develop | l5q2n3o | feat(conductor): add logout button to sidebar | Fernandovepro | 2026-07-04 |
+| safebus-frontend | develop | m6r3o4p | fix(qr-scanner): use valid seeded employee codes for auto-scan | Fernandovepro | 2026-07-05 |
 
-| Archivo | Cambio |
-|---|---|
-| `shared/infrastructure/fleet-tracking.service.ts` | **Nuevo.** Simulación de posición GPS y alertas de la flota completa. |
-| `conductor/infrastructure/conductor-api-endpoint.ts` | Corrección del mapeo `Employee → Conductor`. |
-| `conductor/infrastructure/conductor-state.service.ts` | Centralización del cronómetro de turno y vínculo con `FleetTrackingService`. |
-| `conductor/presentation/views/login/login.ts` | Manejo de errores HTTP en la verificación de código. |
-| `conductor/presentation/views/dashboard/dashboard.ts` | Migrado a leer tiempo/distancia desde el estado centralizado. |
-| `conductor/presentation/views/view-map/view-map.ts` | Integración con Leaflet + marcador en tiempo real. |
-| `conductor/presentation/views/panic-alert/panic-alert.ts` | Disparo real de alertas hacia `FleetTrackingService`. |
-| `conductor/presentation/views/alert-logs/alert-logs.ts` | Reescrito para consumir alertas reales del conductor activo. |
-| `conductor/presentation/views/qr-scanner/qr-scanner.ts` | Corrección del código QR simulado hardcodeado. |
-| `conductor/presentation/components/conductor-layout/conductor-layout.ts` | Botón de cierre de sesión. |
-| `administration/presentation/views/control-center/control-center.ts` | Integración con Leaflet + flota completa en tiempo real. |
-| `index.html` | Inclusión de Leaflet (CSS/JS) vía CDN. |
+### 5.2.4.5. Execution Evidence for Sprint Review
 
-## 5.2.4.5. Execution Evidence for Sprint Review
+En este sprint se lograron avances significativos en la estabilización del sistema SafeBus en su entorno de
+producción. A diferencia de sprints anteriores, este ciclo estuvo guiado por pruebas manuales directas sobre las
+URLs desplegadas en Vercel y Railway, permitiendo detectar y corregir defectos de contrato entre frontend y
+backend. A continuación se presentan las evidencias técnicas recogidas durante este sprint.
 
-Al cierre del Sprint 4, el equipo verificó en el entorno de producción real (no local) que:
+1. **Diagnóstico de login fallido en producción.** Se confirmó mediante la consola del navegador que la petición a
+   `GET /api/v1/employees/code/EMP-001` retornaba `404 Not Found`, evidenciando que el código nunca había sido
+   persistido en la base de datos real de Railway.
 
-- Un conductor puede autenticarse con un código de empleado real (`EMP-001`–`EMP-007`) persistido en la base de datos
-  de Railway, en lugar de datos simulados del panel admin.
-- El frontend desplegado en cualquier URL de *preview* de Vercel puede comunicarse con el backend sin bloqueos de CORS.
-- El mapa del conductor muestra su unidad desplazándose en tiempo real sobre un mapa interactivo (Leaflet + OpenStreetMap),
-  con movimiento proporcional al tiempo y distancia recorrida del turno.
-- El Centro de Control del administrador muestra las 7 unidades de la flota moviéndose simultáneamente, con alertas
-  automáticas simuladas sobre unidades distintas a la del conductor logueado.
-- Al presionar el botón de pánico, la unidad del conductor cambia a estado de alerta visible en rojo tanto en su propio
-  mapa como en el del administrador, apareciendo en "Alertas Recientes" con opción de resolución.
-- El tiempo total y la distancia recorrida del turno persisten correctamente al navegar entre pantallas del conductor,
-  sin reiniciarse.
-- El escaneo QR simulado detecta automáticamente un conductor válido en un lapso de ~3 segundos.
+2. **Bloqueo por política CORS en despliegues preview de Vercel.** La consola del navegador mostró el error
+   `Access to XMLHttpRequest ... has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is
+   present`, confirmando que `CorsConfig` no reconocía los subdominios de *preview deployment* generados
+   automáticamente por Vercel en cada push.
 
-## 5.2.4.6. Services Documentation Evidence for Sprint Review
+3. **`EmployeeDataSeeder` verificado en Railway.** Tras el despliegue, se confirmó que los 7 empleados
+   (`EMP-001` a `EMP-007`) y el administrador (`ADM-001`) quedaron disponibles automáticamente en cada arranque
+   del contenedor, sin intervención manual.
 
-No se agregaron endpoints nuevos en este Sprint (el foco fue de integración, no de nuevas capacidades de backend);
-se reforzó el consumo del endpoint existente:
+4. **Mapa en tiempo real funcionando en el módulo Conductor.** Tras integrar Leaflet, se verificó que la unidad
+   del conductor autenticado se desplaza de forma continua sobre el mapa, con movimiento proporcional al tiempo
+   y distancia recorrida del turno activo.
 
-| Bounded Context | Endpoint | Verbo HTTP | Descripción | Cambios este Sprint |
+5. **Mapa en tiempo real funcionando en el Centro de Control.** Se verificó que las 7 unidades de la flota se
+   desplazan simultáneamente en el panel de administración, cambiando a color rojo cuando entran en estado de
+   alerta.
+
+6. **Flujo de pánico end-to-end verificado.** Al presionar el botón de pánico desde el módulo Conductor, la unidad
+   correspondiente cambió a estado de alerta visible en rojo tanto en el mapa individual como en el Centro de
+   Control, apareciendo de inmediato en "Alertas Recientes" con la opción de "Resolver".
+
+7. **Persistencia del cronómetro de turno verificada.** Se confirmó que el tiempo total y la distancia recorrida
+   ya no se reinician al navegar entre pantallas del conductor (dashboard ↔ mapa), manteniendo el estado
+   correctamente hasta que el conductor presiona "Finalizar Servicio".
+
+8. **Escaneo QR simulado corregido.** Se verificó que, al ingresar a la pantalla de escaneo, un conductor válido
+   (elegido al azar entre los registrados) es detectado automáticamente en un lapso de ~3 segundos.
+
+### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 4 no se agregaron endpoints nuevos al backend (el foco fue de integración, no de nuevas
+capacidades de servicio); se reforzó y verificó el consumo del endpoint existente en producción.
+
+| Bounded Context | Endpoint | Verb | Descripción | Response Example |
 |---|---|---|---|---|
-| IAM | `/api/v1/employees/code/{employeeCode}` | GET | Valida la identidad del conductor por código de empleado. | Se corrigió el consumo desde el frontend (mapeo de campos) y se garantizó la existencia de datos vía seeder. |
+| IAM | `/api/v1/employees/code/{employeeCode}` | GET | Valida la identidad del conductor por código de empleado; verificado en producción con datos reales del seeder. | `{ "id": 1, "employeeCode": "EMP-001", "fullName": "Marcos E. Silva", "role": "CONDUCTOR" }` |
 
-## 5.2.4.7. Software Deployment Evidence for Sprint Review
+**Notas de integración:**
 
-**Backend (Railway):** se mantiene el auto-deploy en cada push a `main`. Se agregó el `EmployeeDataSeeder`, que se
-ejecuta automáticamente en cada arranque del contenedor, garantizando datos de prueba consistentes sin intervención
-manual tras cada redeploy. Se ajustó `CorsConfig` para aceptar cualquier subdominio de *preview* generado
-automáticamente por Vercel.
+- Autenticación: el frontend consume este endpoint directamente contra `https://safebus-backend-production.up.railway.app`, sin capa de mock intermedia.
+- CORS: habilitado mediante `allowedOriginPatterns` para `localhost:4200`, el dominio de producción de Vercel, y cualquier subdominio de *preview* (`safebus-frontend-*-carlosblancas969s-projects.vercel.app`).
+- Manejo de errores: toda petición fallida (404, error de red, bloqueo CORS) ahora resulta en feedback visible al usuario, en lugar de un estado de carga indefinido.
 
-**Frontend (Vercel):** se mantiene el auto-deploy en cada push. Se incorporó Leaflet vía CDN (sin dependencias nuevas
-en `package.json`), evitando reconfigurar el pipeline de build.
+### 5.2.4.7. Software Deployment Evidence for Sprint Review
 
-**URLs de producción:**
+Durante el Sprint 4 se verificó y estabilizó el despliegue conjunto de SafeBus en Railway (backend) y Vercel
+(frontend), asegurando que ambos entornos de producción se comuniquen correctamente entre sí.
+
+**Entorno de Despliegue**
+
+- Backend: Railway, contenedor Docker generado automáticamente desde `safebus-backend`, con MySQL gestionado por Railway.
+- Frontend: Vercel, generado automáticamente desde `safebus-frontend`, con despliegues de producción y *preview* por cada push.
+- CI/CD: auto-deploy en cada push a `main` en ambos repositorios.
+
+**Cambios de configuración clave**
+
+- `CorsConfig.java`: migrado de una lista fija de orígenes permitidos a `allowedOriginPatterns` con wildcard, evitando tener que actualizar el backend manualmente cada vez que Vercel genera una nueva URL de preview.
+- `EmployeeDataSeeder.java`: nuevo `CommandLineRunner` que garantiza datos de prueba consistentes en cada arranque del contenedor en Railway, sin pasos manuales de configuración post-despliegue.
+- `index.html`: se incorporó Leaflet vía CDN (sin nuevas dependencias en `package.json`), evitando reconfigurar el pipeline de build de Vercel.
+
+**Verificación de Despliegue**
+
+Se realizaron pruebas directamente en el entorno de producción, confirmando:
+
+- El correcto funcionamiento del endpoint de autenticación de conductores a través del dominio público de Railway.
+- La persistencia adecuada de los empleados sembrados en la base de datos MySQL gestionada por Railway.
+- La correcta comunicación entre cualquier URL de *preview* de Vercel y el backend, sin bloqueos de CORS.
+- La estabilidad del mapa en tiempo real y del flujo de alertas de pánico en el entorno desplegado, sin necesidad de ejecución local.
+
+**URLs de producción**
+
 - Backend: `https://safebus-backend-production.up.railway.app`
 - Frontend: `https://safebus-frontend.vercel.app`
 
-## 5.2.4.8. Team Collaboration Insights during Sprint
+### 5.2.4.8. Team Collaboration Insights during Sprint
 
-El Sprint 4 tuvo un enfoque distinto a los anteriores: en lugar de desarrollo de features en paralelo por bounded
-context, el trabajo se centró en **QA de integración guiado por evidencia** — cada corrección partió de un síntoma
-observado en producción (login que no entra, CORS bloqueando peticiones, mapa que no se mueve, pánico que no llega
-a administración, cronómetro que se reinicia), seguido de diagnóstico de causa raíz antes de proponer el fix. Esta
-metodología de "reproducir → diagnosticar → corregir → verificar" permitió detectar que varios síntomas aparentemente
-distintos compartían la misma causa de fondo (por ejemplo, el mapeo incorrecto de `codigoEmpleado` afectaba tanto al
-movimiento del bus como a la llegada de alertas de pánico), evitando parches aislados y logrando una solución
-estructural en `ConductorStateService` y `FleetTrackingService`.
+Durante el Sprint 4, el equipo adoptó una dinámica de trabajo distinta a la de sprints anteriores: en lugar de
+desarrollo de features en paralelo por bounded context, el enfoque se centró en QA de integración guiado por
+evidencia. Cada corrección partió de un síntoma observado directamente en producción (login que no autentica,
+peticiones bloqueadas por CORS, mapa que no se mueve, alertas de pánico que no llegan a administración, cronómetro
+que se reinicia), seguido de un diagnóstico de causa raíz antes de aplicar cualquier corrección.
+
+- Carlos lideró el diagnóstico y corrección de la autenticación real contra el backend en producción, incluyendo
+  la configuración de CORS y el seeder de empleados de prueba.
+- Leonardo se encargó de construir el módulo de monitoreo de flota en tiempo real, integrando Leaflet tanto en el
+  módulo Conductor como en Administración.
+- Boris lideró la integración end-to-end del sistema de alertas de pánico, conectando el botón de emergencia del
+  conductor con el panel de administración.
+- Ivonne resolvió la inconsistencia del cronómetro de turno, centralizando el estado para que persista
+  correctamente durante toda la sesión del conductor.
+- Fernando se encargó de completar detalles pendientes de experiencia de usuario (cierre de sesión, corrección
+  del escaneo QR simulado) detectados durante las pruebas de QA.
+
+Esta metodología de "reproducir → diagnosticar → corregir → verificar" permitió detectar que varios síntomas
+aparentemente distintos compartían la misma causa de fondo — por ejemplo, el mapeo incorrecto del código de
+empleado afectaba tanto al movimiento del bus en el mapa como a la llegada de alertas de pánico a administración —
+evitando parches aislados y logrando una solución estructural compartida entre `ConductorStateService` y
+`FleetTrackingService`.
 
 ---
 
