@@ -979,26 +979,38 @@ backend. A continuación se presentan las evidencias técnicas recogidas durante
    `GET /api/v1/employees/code/EMP-001` retornaba `404 Not Found`, evidenciando que el código nunca había sido
    persistido en la base de datos real de Railway.
 
+   ![Error 404 en consola del navegador al validar EMP-001](ruta-a-la-imagen.png)
+
 2. **Bloqueo por política CORS en despliegues preview de Vercel.** La consola del navegador mostró el error
    `Access to XMLHttpRequest ... has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is
    present`, confirmando que `CorsConfig` no reconocía los subdominios de *preview deployment* generados
    automáticamente por Vercel en cada push.
 
+   ![Error de CORS bloqueando la petición al backend](ruta-a-la-imagen.png)
+
 3. **`EmployeeDataSeeder` verificado en Railway.** Tras el despliegue, se confirmó que los 7 empleados
    (`EMP-001` a `EMP-007`) y el administrador (`ADM-001`) quedaron disponibles automáticamente en cada arranque
    del contenedor, sin intervención manual.
+
+   ![Empleado EMP-001 devuelto correctamente por el backend en Railway](ruta-a-la-imagen.png)
 
 4. **Mapa en tiempo real funcionando en el módulo Conductor.** Tras integrar Leaflet, se verificó que la unidad
    del conductor autenticado se desplaza de forma continua sobre el mapa, con movimiento proporcional al tiempo
    y distancia recorrida del turno activo.
 
+   ![Mapa Leaflet del conductor con el bus en movimiento](ruta-a-la-imagen.png)
+
 5. **Mapa en tiempo real funcionando en el Centro de Control.** Se verificó que las 7 unidades de la flota se
    desplazan simultáneamente en el panel de administración, cambiando a color rojo cuando entran en estado de
    alerta.
 
+   ![Centro de Control con las 7 unidades moviéndose en tiempo real](ruta-a-la-imagen.png)
+
 6. **Flujo de pánico end-to-end verificado.** Al presionar el botón de pánico desde el módulo Conductor, la unidad
    correspondiente cambió a estado de alerta visible en rojo tanto en el mapa individual como en el Centro de
    Control, apareciendo de inmediato en "Alertas Recientes" con la opción de "Resolver".
+
+   ![Unidad en alerta roja y notificación en Alertas Recientes del admin](ruta-a-la-imagen.png)
 
 7. **Persistencia del cronómetro de turno verificada.** Se confirmó que el tiempo total y la distancia recorrida
    ya no se reinician al navegar entre pantallas del conductor (dashboard ↔ mapa), manteniendo el estado
@@ -1006,6 +1018,8 @@ backend. A continuación se presentan las evidencias técnicas recogidas durante
 
 8. **Escaneo QR simulado corregido.** Se verificó que, al ingresar a la pantalla de escaneo, un conductor válido
    (elegido al azar entre los registrados) es detectado automáticamente en un lapso de ~3 segundos.
+
+   ![Escáner QR detectando automáticamente a un conductor válido](ruta-a-la-imagen.png)
 
 ### 5.2.4.6. Services Documentation Evidence for Sprint Review
 
@@ -1048,6 +1062,12 @@ Se realizaron pruebas directamente en el entorno de producción, confirmando:
 - La correcta comunicación entre cualquier URL de *preview* de Vercel y el backend, sin bloqueos de CORS.
 - La estabilidad del mapa en tiempo real y del flujo de alertas de pánico en el entorno desplegado, sin necesidad de ejecución local.
 
+**Evidencia Visual**
+
+![Deploy exitoso del backend en el dashboard de Railway](ruta-a-la-imagen.png)
+
+![Deploy exitoso del frontend en el dashboard de Vercel](ruta-a-la-imagen.png)
+
 **URLs de producción**
 
 - Backend: `https://safebus-backend-production.up.railway.app`
@@ -1078,6 +1098,9 @@ empleado afectaba tanto al movimiento del bus en el mapa como a la llegada de al
 evitando parches aislados y logrando una solución estructural compartida entre `ConductorStateService` y
 `FleetTrackingService`.
 
+![Opcional: alerta pasando de roja a resuelta al presionar "Resolver"](ruta-a-la-imagen.png)
+
+![Opcional: sidebar del conductor mostrando el nuevo botón "Cerrar Sesión"](ruta-a-la-imagen.png)
 ---
 
 # Arquitectura Implementada para SAFEBUS
