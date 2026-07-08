@@ -986,7 +986,7 @@ backend. A continuación se presentan las evidencias técnicas recogidas durante
    present`, confirmando que `CorsConfig` no reconocía los subdominios de *preview deployment* generados
    automáticamente por Vercel en cada push.
 
-   ![Error de CORS bloqueando la petición al backend](ruta-a-la-imagen.png)
+   <img src="Resources/img/BackFrontFallido.png"> 
 
 3. **`EmployeeDataSeeder` verificado en Railway.** Tras el despliegue, se confirmó que los 7 empleados
    (`EMP-001` a `EMP-007`) y el administrador (`ADM-001`) quedaron disponibles automáticamente en cada arranque
