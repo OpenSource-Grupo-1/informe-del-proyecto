@@ -985,50 +985,46 @@ y contra los endpoints reales usando Swagger. A continuación se presentan las e
    Workbench hacia la base de datos MySQL desplegada en Railway (host público vía TCP proxy), confirmando acceso
    real de solo lectura/escritura a los datos en producción.
 
-   ![Conexión exitosa desde MySQL Workbench a la base de datos de Railway](./assets/sprint4/01-mysql-conexion-exitosa.png)
+    <img src="Resources/img/ConexiónBDRailway.jpeg">
 
 2. **`EmployeeDataSeeder` verificado con datos reales.** Se confirmó en MySQL que los 7 empleados (`EMP-001` a
    `EMP-007`) y el administrador (`ADM-001`) quedaron disponibles automáticamente en la tabla `employees`, sin
    intervención manual.
 
-   ![Tabla employees con los 8 registros sembrados](./assets/sprint4/02-mysql-employees.png)
+  <img src="Resources/img/Tabla8Conductores.jpeg">
 
 3. **Swagger UI funcionando en producción.** Se verificó el endpoint `GET /api/v1/employees` directamente contra
    `https://safebus-backend-production.up.railway.app`, confirmando que responde con los mismos datos vistos en
    MySQL.
 
-   ![Swagger UI mostrando la respuesta del endpoint de empleados](./assets/sprint4/03-swagger-employees.png)
+  <img src="Resources/img/swaggerDeployado.jpeg">
 
 4. **`BusUnitDataSeeder` verificado con datos reales.** Se confirmó en MySQL que las 7 unidades de la flota
    (`ABC-1234` a `STU-5678`) quedaron creadas en `bus_units` con su placa, ruta y coordenadas iniciales.
 
-   ![Tabla bus_units recién sembrada](./assets/sprint4/04-mysql-bus-units-inicial.png)
+    <img src="Resources/img/TablaBusUnit.jpeg">
 
 5. **Movimiento de la flota persistido en tiempo real.** Tras dejar el frontend abierto unos minutos, se volvió a
    consultar `bus_units` y se confirmó que `current_latitude`, `current_longitude` y `updated_at` habían cambiado
    para las 7 unidades, demostrando que cada movimiento simulado se guarda de verdad en la base de datos.
 
-   ![Tabla bus_units con coordenadas actualizadas tras el movimiento](./assets/sprint4/05-mysql-bus-units-actualizado.png)
+  <img src="Resources/img/TablaBusUnit.jpeg">
+  Alertas2
 
 6. **Flujo de pánico persistido de extremo a extremo.** Al presionar el botón de pánico desde el conductor y
    esperar las alertas automáticas de otras unidades, se confirmó en la tabla `alerts` la creación de registros
    reales (`PÁNICO`, `VELOCIDAD`, `DESVÍO`) con su `employee_id`, `bus_unit_id` y coordenadas exactas.
 
-   ![Tabla alerts con registros reales de pánico y alertas automáticas](./assets/sprint4/06-mysql-alerts-activas.png)
+   <img src="Resources/img/Alertas2.jpeg">
 
 7. **Resolución de alertas persistida.** Al presionar "Resolver" desde el panel de administración para cada
    alerta, se confirmó en MySQL que el campo `status` cambió de `ACTIVE` a `RESOLVED` para las 3 alertas.
 
-   ![Tabla alerts con las 3 alertas en estado RESOLVED](./assets/sprint4/07-mysql-alerts-resueltas.png)
+  <img src="Resources/img/alertas1.jpeg">
 
 8. **Persistencia del cronómetro de turno verificada.** Se confirmó que el tiempo total y la distancia recorrida
-   ya no se reinician al navegar entre pantallas del conductor (dashboard ↔ mapa), manteniendo el estado
+   ya no se reinician al navegar entre pantallas del conductor (dashboard - mapa), manteniendo el estado
    correctamente hasta que el conductor presiona "Finalizar Servicio".
-
-9. **Escaneo QR simulado corregido.** Se verificó que, al ingresar a la pantalla de escaneo, un conductor válido
-   (elegido al azar entre los registrados) es detectado automáticamente en un lapso de ~3 segundos.
-
-   ![Escáner QR detectando automáticamente a un conductor válido](./assets/sprint4/08-qr-scanner-detectado.png)
 
 ### 5.2.4.6. Services Documentation Evidence for Sprint Review
 
@@ -1067,9 +1063,13 @@ servicio en despliegues nuevos.
 
 **Evidencia Visual**
 
-![Dashboard de Railway mostrando los servicios backend y MySQL activos](./assets/sprint4/09-railway-servicios-activos.png)
+Safebus-Backend deployado en Railway:
 
-![Deploy exitoso del frontend en el dashboard de Vercel](./assets/sprint4/10-vercel-deploy-exitoso.png)
+<img src="Resources/img/BackDeployado.jpeg">
+
+Safebus-frontend deployado en Vercel:
+
+<img src="Resources/img/FrontDeployadp.jpeg">
 
 **URLs de producción**
 
@@ -1098,11 +1098,8 @@ solo contra el comportamiento visual del frontend.
 
 Esta metodología de "reproducir → diagnosticar → corregir → verificar contra la base de datos real" permitió
 confirmar, con evidencia concreta y no solo visual, que el sistema SafeBus queda completamente integrado de
-extremo a extremo: MySQL ↔ Backend (Swagger) ↔ Frontend (Vercel).
+extremo a extremo: MySQL ↔ Backend (Swagger) ↔ Frontend (Vercel)
 
-![Opcional: alerta pasando de roja a resuelta al presionar "Resolver"](ruta-a-la-imagen.png)
-
-![Opcional: sidebar del conductor mostrando el nuevo botón "Cerrar Sesión"](ruta-a-la-imagen.png)
 ---
 
 # Arquitectura Implementada para SAFEBUS
