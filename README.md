@@ -5,26 +5,43 @@
 
 # Universidad Peruana de Ciencias Aplicadas
 
-**Facultad de Ingeniería: Ingeniería de Software**  
-**Desarrollo de Aplicaciones Open Source**  
-**1ASI0729-2610-11959**
+### Carrera de Ingeniería de Software
 
-**Profesor:** Hugo Allan Mori Paiva
+### **1ASI0729**
 
-**"Informe de Trabajo Final"**
+### **Desarrollo de Aplicaciones Open Source**
 
-**Startup:** UrbanGuardle
+NRC
 
+### **11959**
 
-| Código | Integrante |
-|--------|-----------|
+### **Informe del Trabajo Final**
+
+Docente
+
+### **Mori Paiva, Hugo Allan**
+
+Equipo
+
+### **UrbanGuardle**
+
+Proyecto
+
+### **UrbanGuard**
+
+### **Integrantes**
+
+| Código | Apellidos y Nombres |
+|--------|---------------------|
 | U202321020 | Delgado Arriola, Leonardo Sebastian |
 | U20241B676 | Alvarado Millan, Boris |
 | U20241A995 | Ibañez Torres, Ivonne Beatriz |
 | U20241A322 | Blancas Chavez, Carlos Franco |
 | U20241C187 | Espiritu Silvestre, Fernando Carlos |
 
-**Abril 2026-10**
+### **Período 202610**
+
+**Julio 2026**
 
 ---
 
