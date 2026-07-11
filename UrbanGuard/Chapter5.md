@@ -1028,6 +1028,17 @@ y contra los endpoints reales usando Swagger. A continuación se presentan las e
 
 ### 5.2.4.6. Services Documentation Evidence for Sprint Review
 
+Durante el Sprint 4 se actualizo la documentacion de servicios para reflejar la integracion entre el frontend de SafeBus y los Web Services reales implementados en Spring Boot. A diferencia del Sprint 3, donde el foco estuvo en construir y exponer los endpoints del backend, en este Sprint se valido que dichos servicios fueran consumidos desde la aplicacion Vue 3 mediante adaptadores API, variables de entorno y autenticacion JWT.
+
+Para registrar esta evidencia se revisaron los artefactos actualizados de ambos repositorios: Frontend y Backend-main. En el backend se verifico la existencia de controladores REST por bounded context, documentacion OpenAPI/Swagger, soporte para token Bearer, CORS y mapeo de controladores. En el frontend se verifico la configuracion de la URL base del API, el interceptor para adjuntar el token JWT y los archivos api.js encargados de consumir cada servicio.
+
+**Repositorio Frontend:** https://github.com/OpenSource-Grupo-1/safebus-frontend 
+**Repositorio Backend / Web Services:** https://github.com/OpenSource-Grupo-1/safebus-backend 
+**URL base local del API:** http://localhost:5175/api/v1  
+**URL local de documentacion Swagger:** http://localhost:5175/swagger 
+**URL de documentacion Swagger en produccion:** https://safebus-backend-production.up.railway.app/swagger-ui.html  
+**Formato de autenticacion:** Authorization: Bearer <token>
+
 | Bounded Context | Endpoint | Verb | Descripción | Uso en este Sprint |
 |---|---|---|---|---|
 | IAM | `/api/v1/employees/code/{employeeCode}` | GET | Valida la identidad del conductor por código de empleado. | Consumido por el login del frontend; verificado en Swagger y MySQL. |
